@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[NPM概述]]></title>
-    <url>%2F2018%2F10%2F19%2Fnpm%E6%A6%82%E8%BF%B0%2F</url>
-    <content type="text"><![CDATA[npm1 npm 的两层含义 NPM 是一个 第三方模块的托管网站，指的就是https://www.npmjs.com/； NPM 是Node的包管理工具（全名叫做 Node package manager），在我们安装Node时候，就已经顺便也安装了 NPM 这个管理工具； 2 安装和卸载全局包（i5ting_toc）把md文件转换为html文件 什么是全局的包：安装到计算机全局环境中的包，叫做全局包；安装的全局包可以在当前电脑的任何目录下，直接通过命令行来访问； 如何安装全局包：运行 npm install 包名 -g 即可；其中 -g 参数，表示 把包安装到全局目录中的意思； 全局包的安装目录：C:\Users\用户目录\AppData\Roaming\npm 什么样的包适合安装到全局：工具性质的包，适合安装到全局； 如何卸载全局包：要卸载某个全局的包，直接运行npm uninstall 包名 -g即可；其中 uninstall 表示卸载的意思； 3 安装和卸载本地包 什么是本地的包：跟着项目安装的包，叫做本地包；本地包都会被安装到 node_modules 目录下； 注意：如果拿到一个空项目，必须在当前项目根目录中，先运行 npm init或者npm init -y 命令，初始化一个package.json的配置文件，否则包无法安装到本地项目中； 如何安装本地包：运行npm i 包名 --save 即可安装本地包；都安装到了当前项目的 node_modules目录下； 如果大家用的是npm 5.x的版本，可以不指定--save命令，如果用的是 npm 3.x 的版本，则需要手动指定 --save； package-lock.json文件中记录了曾经装过的包的下载地址，方便下次直接下载包，能够加快装包的速度，提升装包的体验； 如何卸载本地包：使用 npm uninstall/remove 包名 -S/-D即可卸载指定的本地包； 4 其它常用命令 --save 的缩写是 -S --save-dev的缩写是 -D开发时候使用 install 的缩写是 i 注意：dependencies 节点，表示项目上线部署时候需要的依赖项；devDependencies节点，表示项目在开发阶段需要的依赖项，但是当项目要部署上线了，devDependencies节点中的包，就不再需要了！ 注意：当使用 npm i快速装包的时候，npm会检查package.json文件中，所有的依赖项，然后都为我们安装到项目中 --production 表示只安装 dependencies 节点下，记录的包，不安装devDependencies节点下的包；当项目要上线了，才会使用--production命令 5 解决 npm 下载慢问题 默认，NPM在下载包的时候，连接的是国外的服务器，所以，有时候如果网速不是特别好，可能下载不下来包；此时，大家可以全局安装一个的工具，叫做 cnpm 如何安装cnpm：运行 npm i cnpm -g 即可； 如何使用cnpm：在装包的时候，只需要把 npm 替换成 cnpm 即可，例如： 使用 npm 安装 jquery：运行 npm i jquery -S 使用 cnpm 安装 jquery： 运行 cnpm i jquery -S]]></content>
-      <categories>
-        <category>node.js</category>
-      </categories>
-      <tags>
-        <tag>npm</tag>
-        <tag>nodejs</tag>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[vue生命周期]]></title>
     <url>%2F2018%2F10%2F19%2Fvue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%2F</url>
     <content type="text"><![CDATA[vue实例的生命周期概念：每一个Vue实例创建、运行、销毁的过程，就是生命周期；在实例的生命周期中，总是伴随着各种事件，这些事件就是生命周期函数； 什么是生命周期（每个实例的一辈子）生命周期：实例的生命周期，就是一个阶段，从创建到运行，再到销毁的阶段；(https://cn.vuejs.org/v2/guide/instance.html#实例生命周期)生命周期函数：在实例的生命周期中，在特定阶段执行的一些特定的事件，这些事件，叫做 生命周期函数； 生命周期钩子：就是生命周期事件的别名而已； 生命周期钩子 = 生命周期函数 = 生命周期事件 主要的生命周期函数分类 创建期间的生命周期函数：(特点：每个实例一辈子只执行一次) beforeCreate：创建之前，此时 data 和 methods 尚未初始化 created(第一个重要的函数，此时，data 和 methods 已经创建好了，可以被访问了) beforeMount：挂载模板结构之前，此时，页面还没有被渲染到浏览器中； mounted（第二个重要的函数，此时，页面刚刚被渲染出来；如果要操作DOM元素，最好在这个阶段） 运行期间的生命周期函数：（特点：按需被调用 至少0次，最多N次） beforeUpdate：数据是最新的，页面是旧的 updated：页面和数据都是最新的 销毁期间的生命周期函数：(特点：每个实例一辈子只执行一次) beforeDestroy：销毁之前，实例还正常可用 destroyed：销毁之后，实例已经不工作了]]></content>
@@ -23,6 +10,19 @@
       <tags>
         <tag>前端</tag>
         <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[NPM概述]]></title>
+    <url>%2F2018%2F10%2F19%2Fnpm%E6%A6%82%E8%BF%B0%2F</url>
+    <content type="text"><![CDATA[npm1 npm 的两层含义 NPM 是一个 第三方模块的托管网站，指的就是https://www.npmjs.com/； NPM 是Node的包管理工具（全名叫做 Node package manager），在我们安装Node时候，就已经顺便也安装了 NPM 这个管理工具； 2 安装和卸载全局包（i5ting_toc）把md文件转换为html文件 什么是全局的包：安装到计算机全局环境中的包，叫做全局包；安装的全局包可以在当前电脑的任何目录下，直接通过命令行来访问； 如何安装全局包：运行 npm install 包名 -g 即可；其中 -g 参数，表示 把包安装到全局目录中的意思； 全局包的安装目录：C:\Users\用户目录\AppData\Roaming\npm 什么样的包适合安装到全局：工具性质的包，适合安装到全局； 如何卸载全局包：要卸载某个全局的包，直接运行npm uninstall 包名 -g即可；其中 uninstall 表示卸载的意思； 3 安装和卸载本地包 什么是本地的包：跟着项目安装的包，叫做本地包；本地包都会被安装到 node_modules 目录下； 注意：如果拿到一个空项目，必须在当前项目根目录中，先运行 npm init或者npm init -y 命令，初始化一个package.json的配置文件，否则包无法安装到本地项目中； 如何安装本地包：运行npm i 包名 --save 即可安装本地包；都安装到了当前项目的 node_modules目录下； 如果大家用的是npm 5.x的版本，可以不指定--save命令，如果用的是 npm 3.x 的版本，则需要手动指定 --save； package-lock.json文件中记录了曾经装过的包的下载地址，方便下次直接下载包，能够加快装包的速度，提升装包的体验； 如何卸载本地包：使用 npm uninstall/remove 包名 -S/-D即可卸载指定的本地包； 4 其它常用命令 --save 的缩写是 -S --save-dev的缩写是 -D开发时候使用 install 的缩写是 i 注意：dependencies 节点，表示项目上线部署时候需要的依赖项；devDependencies节点，表示项目在开发阶段需要的依赖项，但是当项目要部署上线了，devDependencies节点中的包，就不再需要了！ 注意：当使用 npm i快速装包的时候，npm会检查package.json文件中，所有的依赖项，然后都为我们安装到项目中 --production 表示只安装 dependencies 节点下，记录的包，不安装devDependencies节点下的包；当项目要上线了，才会使用--production命令 5 解决 npm 下载慢问题 默认，NPM在下载包的时候，连接的是国外的服务器，所以，有时候如果网速不是特别好，可能下载不下来包；此时，大家可以全局安装一个的工具，叫做 cnpm 如何安装cnpm：运行 npm i cnpm -g 即可； 如何使用cnpm：在装包的时候，只需要把 npm 替换成 cnpm 即可，例如： 使用 npm 安装 jquery：运行 npm i jquery -S 使用 cnpm 安装 jquery： 运行 cnpm i jquery -S]]></content>
+      <categories>
+        <category>node.js</category>
+      </categories>
+      <tags>
+        <tag>npm</tag>
+        <tag>前端</tag>
+        <tag>nodejs</tag>
       </tags>
   </entry>
   <entry>

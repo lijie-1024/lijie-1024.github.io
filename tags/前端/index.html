@@ -363,9 +363,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2018/10/19/npm概述/" itemprop="url">
+            <a class="post-title-link" href="/2018/10/19/vue生命周期/" itemprop="url">
               
-                <span itemprop="name">NPM概述</span>
+                <span itemprop="name">vue生命周期</span>
               
             </a>
         
@@ -391,9 +391,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2018/10/19/vue生命周期/" itemprop="url">
+            <a class="post-title-link" href="/2018/10/19/npm概述/" itemprop="url">
               
-                <span itemprop="name">vue生命周期</span>
+                <span itemprop="name">NPM概述</span>
               
             </a>
         
@@ -668,9 +668,6 @@
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
-
-
 
   <span class="post-meta-divider">|</span>
 
@@ -816,6 +813,31 @@
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'e1GcWhLvuWrBBd32TnK2uY4q-gzGzoHsz',
+        appKey: 'YKK9nBwtE9CBzI53zlgKRBcE',
+        placeholder: '发表您的评论',
+        avatar:'mm',
+        meta:guest,
+        pageSize:'5' || 10,
+        visitor: false
+    });
+  </script>
 
 
 
