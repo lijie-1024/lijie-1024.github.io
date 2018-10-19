@@ -115,20 +115,25 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="小黑&#39;s Blog">
-<meta property="og:url" content="http://lijie-1024.github.io/archives/index.html">
+  <meta name="description" content="Node.js 中 模块 和 包 的概念Node.js 由三部分组成：ECMAScript 核心 + 全局成员 + 模块成员  模块成员，根据一些区别，又可以分为三大类： 核心模块、第三方模块、用户自定义模块">
+<meta name="keywords" content="node.js,模块化,npm">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Node.js中模块和包的概念">
+<meta property="og:url" content="http://lijie-1024.github.io/2018/10/17/nodejs中模块和包的概念/index.html">
 <meta property="og:site_name" content="小黑&#39;s Blog">
+<meta property="og:description" content="Node.js 中 模块 和 包 的概念Node.js 由三部分组成：ECMAScript 核心 + 全局成员 + 模块成员  模块成员，根据一些区别，又可以分为三大类： 核心模块、第三方模块、用户自定义模块">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-10-19T08:06:36.259Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小黑&#39;s Blog">
+<meta name="twitter:title" content="Node.js中模块和包的概念">
+<meta name="twitter:description" content="Node.js 中 模块 和 包 的概念Node.js 由三部分组成：ECMAScript 核心 + 全局成员 + 模块成员  模块成员，根据一些区别，又可以分为三大类： 核心模块、第三方模块、用户自定义模块">
 
 
 
 
 
 
-  <link rel="canonical" href="http://lijie-1024.github.io/archives/"/>
+  <link rel="canonical" href="http://lijie-1024.github.io/2018/10/17/nodejs中模块和包的概念/"/>
 
 
 
@@ -138,7 +143,7 @@
   };
 </script>
 
-  <title>归档 | 小黑's Blog</title>
+  <title>Node.js中模块和包的概念 | 小黑's Blog</title>
   
 
 
@@ -185,7 +190,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -275,28 +280,6 @@
   
     
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
   
 
   
@@ -344,228 +327,343 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lijie-1024.github.io/2018/10/17/nodejs中模块和包的概念/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cat_李小黑">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小黑's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">Node.js中模块和包的概念
+              
+            
+          </h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-10-17 15:47:00" itemprop="dateCreated datePublished" datetime="2018-10-17T15:47:00+08:00">2018-10-17</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-10-19 16:06:36" itemprop="dateModified" datetime="2018-10-19T16:06:36+08:00">2018-10-19</time>
+              
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 5 篇日志。 继续努力。
-      </span>
-      
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/node-js/" itemprop="url" rel="index"><span itemprop="name">node.js</span></a></span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
 
-        
+          
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/10/19/npm概述/" itemprop="url">
-              
-                <span itemprop="name">NPM概述</span>
-              
-            </a>
-        
-      </h2>
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-10-19T15:47:00+08:00"
-              content="2018-10-19" >
-          10-19
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+          
 
+        </div>
+      </header>
+    
 
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/10/19/vue生命周期/" itemprop="url">
-              
-                <span itemprop="name">vue生命周期</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-10-19T15:47:00+08:00"
-              content="2018-10-19" >
-          10-19
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/10/18/vue品牌管理案例/" itemprop="url">
-              
-                <span itemprop="name">vue品牌管理案例</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-10-18T20:55:42+08:00"
-              content="2018-10-18" >
-          10-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <h2 id="Node-js-中-模块-和-包-的概念"><a href="#Node-js-中-模块-和-包-的概念" class="headerlink" title="Node.js 中 模块 和 包 的概念"></a>Node.js 中 <code>模块</code> 和 <code>包</code> 的概念</h2><p>Node.js 由三部分组成：ECMAScript 核心 + 全局成员 + 模块成员</p>
+<blockquote>
+<p>模块成员，根据一些区别，又可以分为三大类： 核心模块、第三方模块、用户自定义模块<br><a id="more"></a></p>
+</blockquote>
+<h3 id="1-模块成员的分类"><a href="#1-模块成员的分类" class="headerlink" title="1 模块成员的分类"></a>1 模块成员的分类</h3><h4 id="1-1-核心模块"><a href="#1-1-核心模块" class="headerlink" title="1.1 核心模块"></a>1.1 核心模块</h4><ol>
+<li><strong>什么是核心模块：</strong><ul>
+<li>随着 Node.js 的安装包，一同安装到本地的模块，叫做核心模块；</li>
+<li>例如：<code>fs</code>，<code>path</code>等模块，都是由 Node.js 官方提供的核心模块；</li>
+<li>只要大家在计算机中，安装了 Node 这个应用程序，那么，我们的计算机中就已经安装了所有的 核心模块；</li>
+</ul>
+</li>
+<li><strong>如何使用核心模块</strong>：<code>require(&#39;核心模块标识符&#39;)</code></li>
+</ol>
+<h4 id="2-2-第三方模块"><a href="#2-2-第三方模块" class="headerlink" title="2.2 第三方模块"></a>2.2 第三方模块</h4><ol>
+<li><strong>什么是第三方模块：</strong><ul>
+<li>一些非官方提供的模块，叫做第三方模块；</li>
+<li>注意，第三方模块，并不在我们的计算机上；</li>
+<li>如果大家需要使用某些第三方模块，必须去一个叫做 <code>NPM</code> 的网站上搜索并下载才能使用；</li>
+</ul>
+</li>
+<li><strong>如何使用第三方模块：</strong><ul>
+<li>先从 npm 官网上下载指定的第三方模块</li>
+<li>使用 <code>require(&#39;第三方模块的名称标识符&#39;)</code>来导入这个模块</li>
+<li>根据 第三方模块的 官方文档，尝试使用</li>
+</ul>
+</li>
+</ol>
+<h4 id="2-3-用户自定义模块"><a href="#2-3-用户自定义模块" class="headerlink" title="2.3 用户自定义模块"></a>2.3 用户自定义模块</h4><ol>
+<li><strong>什么是用户模块：</strong><ul>
+<li>程序员在自己项目中写的 Javascript 文件，就叫做 用户自定义模块；</li>
+</ul>
+</li>
+<li><strong>如何使用用户模块：</strong><code>require(&#39;路径标识符&#39;)</code></li>
+</ol>
+<h3 id="2-包的定义和使用"><a href="#2-包的定义和使用" class="headerlink" title="2 包的定义和使用"></a>2 包的定义和使用</h3><h4 id="2-1-什么是"><a href="#2-1-什么是" class="headerlink" title="2.1 什么是"></a>2.1 什么是</h4><ol>
+<li>英文名叫做 <code>Packages</code>，包是在模块基础上更深一步的抽象；</li>
+<li>包的目的：方便分发和推广基于 CommonJS 规范实现的 应用程序 或 类库；</li>
+<li>包可以看作是 <strong>模块</strong>、<strong>代码</strong> 和 <strong>其它资源</strong> 组合起来形成的 独立作用域；</li>
+<li>相当于一个入口文件，整合了其他模块,<br>整合资源，向外暴露</li>
+</ol>
+<h4 id="2-2-规范的包结构"><a href="#2-2-规范的包结构" class="headerlink" title="2.2 规范的包结构"></a>2.2 规范的包结构</h4><ol>
+<li><strong>包都要以一个单独的目录而存在</strong>；</li>
+<li><strong><code>package.json</code> 必须在包的顶层目录下</strong>；</li>
+<li><strong><code>package.json</code> 文件必须符合 JSON 格式，并且必须包含如下三个属性：<code>name</code>, <code>version</code>, <code>main</code></strong><ul>
+<li><strong>name</strong>: 包的名字</li>
+<li><strong>version</strong>: 包的版本号</li>
+<li><strong>main</strong>: 表示包的入口文件</li>
+</ul>
+</li>
+<li>二进制文件应该在<strong>bin 目录</strong>下;<br>javaScript 代码应该在<strong>lib 目录</strong>下;</li>
+<li>文档应该在<strong>doc 目录</strong>下;<br>单元测试应该在<strong>test 目录</strong>下;</li>
+<li>Node.js 对包要求并没有那么严格，只要顶层目录下有<code>package.json</code>，并<strong>符合基本规范</strong>即可;</li>
+</ol>
+<h4 id="2-3-包描述文件-package-json【了解】"><a href="#2-3-包描述文件-package-json【了解】" class="headerlink" title="2.3 包描述文件 package.json【了解】"></a>2.3 包描述文件 package.json【了解】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">name：包的名称，必须是唯一</span><br><span class="line">description：包的简要说明</span><br><span class="line">version：符合语义化版本识别规范的版本字符串</span><br><span class="line">keywords：关键字数据，通常用于搜索</span><br><span class="line">maintainers：维护者数组，每个元素要包含name、email、web可选字段</span><br><span class="line">contributors：贡献者数组，格式与maintainers相同。包的坐着应该是贡献者数据的第一个元素</span><br><span class="line">bugs：提交bug的地址，可以是网址或者电子邮件地址</span><br><span class="line">licenses：许可证数组，每个元素要包含type和url字段</span><br><span class="line">repositories：仓库托管地址数组，每个元素要包含type、url和path字段</span><br><span class="line">dependencies：包的依赖，一个关联数组，由包名称和版本号组成。</span><br><span class="line">devDependencies：开发依赖项，表示一个包在开发期间用到的依赖项</span><br></pre></td></tr></table></figure>
+<h2 id="模块作用域-和-全局作用域"><a href="#模块作用域-和-全局作用域" class="headerlink" title="模块作用域 和 全局作用域"></a>模块作用域 和 全局作用域</h2><blockquote>
+<p>在Node.js中有两个作用域，分别是 全局作用域 和 模块作用域；</p>
+</blockquote>
+<ol>
+<li>全局作用域使用 <code>global</code> 来访问，类似于<code>浏览器中的window</code>；</li>
+<li>每个 Javascript 文件，都是一个单独模块，每个模块都有自己独立的作用域，因此：模块中的成员，默认无法被其它模块访问。</li>
+</ol>
+<h3 id="1-使用-global-全局作用域在模块之间共享成员"><a href="#1-使用-global-全局作用域在模块之间共享成员" class="headerlink" title="1 使用 global 全局作用域在模块之间共享成员"></a>1 使用 global 全局作用域在模块之间共享成员</h3><ol>
+<li>如果在某个模块内部，想为 全局的 global 作用域挂载一些属性，需要显示的调用<code>global.***</code>来挂载；</li>
+<li>注意：在开发中，一般情况下，不推荐使用<code>global</code>全局作用域来共享成员，会存在全局变量污染问题；</li>
+</ol>
+<h3 id="2-模块作用域"><a href="#2-模块作用域" class="headerlink" title="2 模块作用域"></a>2 模块作用域</h3><ol>
+<li><p><strong>module（模块标识）</strong></p>
+<p>module 属性是 Common JS 规范中定义的，它是一个对象，表示当前这个具体的 js 模块；</p>
+</li>
+<li><p><strong>require（引用模块）</strong></p>
+<p>每一个实现了 CommonJS 规范的模块，必须定义一个 require() 函数，使用这个 require 函数，就能够 很方便的导入其它 模块中的成员，供自己使用；</p>
+</li>
+<li><p><strong>exports（暴露模块成员）</strong></p>
+<p>每一个模块中，如果想要把自己的一些私有成员，暴露给别人使用，那么，必须实现一个 exports 对象，通过exports对象，可以方便的把模块内私有的成员，暴露给外界使用；</p>
+</li>
+</ol>
+<h3 id="3-module-exports-和-exports-的关系"><a href="#3-module-exports-和-exports-的关系" class="headerlink" title="3 module.exports 和 exports 的关系"></a>3 module.exports 和 exports 的关系</h3><ol>
+<li><code>module.exports</code> 和 <code>exports</code> 默认引用了同一个空对象；</li>
+<li><code>module.exports</code> 和 <code>exports</code> 作用一致，都可以向外暴露成员；</li>
+<li>一个模块作用域中，向外暴露私有成员时，永远以 <code>module.exports</code> 为准；</li>
+</ol>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/10/17/nodejs中模块和包的概念/" itemprop="url">
-              
-                <span itemprop="name">Node.js中模块和包的概念</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-10-17T15:47:00+08:00"
-              content="2018-10-17" >
-          10-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/08/03/vscode插件使用大全/" itemprop="url">
-              
-                <span itemprop="name">vscode插件使用大全</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-08-03T12:07:19+08:00"
-              content="2018-08-03" >
-          08-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>Donate comment here</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="cat_李小黑 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="cat_李小黑 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>cat_李小黑</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://lijie-1024.github.io/2018/10/17/nodejs中模块和包的概念/" title="Node.js中模块和包的概念">http://lijie-1024.github.io/2018/10/17/nodejs中模块和包的概念/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/node-js/" rel="tag"># node.js</a>
+          
+            <a href="/tags/模块化/" rel="tag"># 模块化</a>
+          
+            <a href="/tags/npm/" rel="tag"># npm</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/03/vscode插件使用大全/" rel="next" title="vscode插件使用大全">
+                <i class="fa fa-chevron-left"></i> vscode插件使用大全
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/18/vue品牌管理案例/" rel="prev" title="vue品牌管理案例">
+                vue品牌管理案例 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MDM5NC8xNjkyMQ"></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -586,8 +684,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -705,6 +812,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Node-js-中-模块-和-包-的概念"><span class="nav-number">1.</span> <span class="nav-text">Node.js 中 模块 和 包 的概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-模块成员的分类"><span class="nav-number">1.1.</span> <span class="nav-text">1 模块成员的分类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-核心模块"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1 核心模块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-第三方模块"><span class="nav-number">1.1.2.</span> <span class="nav-text">2.2 第三方模块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-用户自定义模块"><span class="nav-number">1.1.3.</span> <span class="nav-text">2.3 用户自定义模块</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-包的定义和使用"><span class="nav-number">1.2.</span> <span class="nav-text">2 包的定义和使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-什么是"><span class="nav-number">1.2.1.</span> <span class="nav-text">2.1 什么是</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-规范的包结构"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.2 规范的包结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-包描述文件-package-json【了解】"><span class="nav-number">1.2.3.</span> <span class="nav-text">2.3 包描述文件 package.json【了解】</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模块作用域-和-全局作用域"><span class="nav-number">2.</span> <span class="nav-text">模块作用域 和 全局作用域</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-使用-global-全局作用域在模块之间共享成员"><span class="nav-number">2.1.</span> <span class="nav-text">1 使用 global 全局作用域在模块之间共享成员</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-模块作用域"><span class="nav-number">2.2.</span> <span class="nav-text">2 模块作用域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-module-exports-和-exports-的关系"><span class="nav-number">2.3.</span> <span class="nav-text">3 module.exports 和 exports 的关系</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -868,6 +991,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.2"></script>
+
+
 
   
 
@@ -880,6 +1007,20 @@
 
 
 
+  
+    <script type="text/javascript">
+      window.livereOptions = {
+        refer: '2018/10/17/nodejs中模块和包的概念/'
+      };
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 

@@ -14,7 +14,7 @@
   
 
 
-<html class="theme-next mist use-motion" lang="en">
+<html class="theme-next mist use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -93,7 +93,7 @@
     root: '/',
     scheme: 'Mist',
     version: '6.4.2',
-    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -119,7 +119,7 @@
 <meta property="og:title" content="小黑&#39;s Blog">
 <meta property="og:url" content="http://lijie-1024.github.io/index.html">
 <meta property="og:site_name" content="小黑&#39;s Blog">
-<meta property="og:locale" content="en">
+<meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小黑&#39;s Blog">
 
@@ -178,7 +178,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -205,7 +205,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="Toggle navigation bar">
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -224,35 +224,40 @@
         
           
           <li class="menu-item menu-item-home menu-item-active">
-    <a href="/" rel="section">Home</a>
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-bell-o"></i> <br />首页</a>
   </li>
         
         
         
           
           <li class="menu-item menu-item-about">
-    <a href="/about/" rel="section">About</a>
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-female"></i> <br />关于</a>
   </li>
         
         
         
           
           <li class="menu-item menu-item-tags">
-    <a href="/tags/" rel="section">Tags<span class="badge">2</span></a>
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
   </li>
         
         
         
           
           <li class="menu-item menu-item-categories">
-    <a href="/categories/" rel="section">Categories<span class="badge">1</span></a>
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />分类</a>
   </li>
         
         
         
           
           <li class="menu-item menu-item-schedule">
-    <a href="/schedule/" rel="section">Schedule</a>
+    <a href="/schedule/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />日程表</a>
   </li>
 
       
@@ -261,7 +266,8 @@
           
             <a href="javascript:;" class="popup-trigger">
           
-            Search</a>
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
         </li>
       
     </ul>
@@ -285,7 +291,7 @@
     </span>
     <div class="local-search-input-wrapper">
       <input autocomplete="off"
-             placeholder="Searching..." spellcheck="false"
+             placeholder="搜索..." spellcheck="false"
              type="text" id="local-search-input">
     </div>
   </div>
@@ -333,7 +339,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lijie-1024.github.io/2018/10/18/第一个帖子/">
+    <link itemprop="mainEntityOfPage" href="http://lijie-1024.github.io/2018/10/19/npm概述/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="cat_李小黑">
@@ -352,8 +358,8 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/10/18/第一个帖子/" itemprop="url">
-                  第一个帖子
+                <a class="post-title-link" href="/2018/10/19/npm概述/" itemprop="url">
+                  NPM概述
                 </a>
               
             
@@ -372,31 +378,19 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
 
               
                 
               
 
-              <time title="Created: 2018-10-18 20:55:42" itemprop="dateCreated datePublished" datetime="2018-10-18T20:55:42+08:00">2018-10-18</time>
+              <time title="创建时间：2018-10-19 15:47:00 / 修改时间：16:09:35" itemprop="dateCreated datePublished" datetime="2018-10-19T15:47:00+08:00">2018-10-19</time>
             
 
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2018-10-19 02:20:45" itemprop="dateModified" datetime="2018-10-19T02:20:45+08:00">2018-10-19</time>
               
             
           </span>
@@ -410,10 +404,10 @@
                 <i class="fa fa-folder-o"></i>
               </span>
               
-                <span class="post-meta-item-text">In</span>
+                <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Test/" itemprop="url" rel="index"><span itemprop="name">Test</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/node-js/" itemprop="url" rel="index"><span itemprop="name">node.js</span></a></span>
 
                 
                 
@@ -448,11 +442,17 @@
 
       
         
-          <h1 id="测试一下我的第一个"><a href="#测试一下我的第一个" class="headerlink" title="测试一下我的第一个"></a>测试一下我的第一个</h1>
+          
+          npm1 npm 的两层含义
+NPM 是一个 第三方模块的托管网站，指的就是https://www.npmjs.com/；
+NPM 是Node的包管理工具（全名叫做  Node package manager），在我们安装Node时候，就已经顺便也安装了 NPM 这个管理工具；
+
+2 安装和卸载全局
+          ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/10/18/第一个帖子/#more" rel="contents">
-              Read more &raquo;
+            <a class="btn" href="/2018/10/19/npm概述/#more" rel="contents">
+              阅读全文 &raquo;
             </a>
           </div>
           <!--/noindex-->
@@ -507,7 +507,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lijie-1024.github.io/2018/10/18/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://lijie-1024.github.io/2018/10/19/vue生命周期/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="cat_李小黑">
@@ -526,8 +526,8 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/10/18/hello-world/" itemprop="url">
-                  Hello World
+                <a class="post-title-link" href="/2018/10/19/vue生命周期/" itemprop="url">
+                  vue生命周期
                 </a>
               
             
@@ -546,19 +546,41 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
 
               
                 
               
 
-              <time title="Created: 2018-10-18 20:25:18" itemprop="dateCreated datePublished" datetime="2018-10-18T20:25:18+08:00">2018-10-18</time>
+              <time title="创建时间：2018-10-19 15:47:00 / 修改时间：16:04:23" itemprop="dateCreated datePublished" datetime="2018-10-19T15:47:00+08:00">2018-10-19</time>
             
 
+            
+              
+
+              
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/vue/" itemprop="url" rel="index"><span itemprop="name">vue</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -588,13 +610,536 @@
 
       
         
-          
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
-          ...
+          <h2 id="vue实例的生命周期"><a href="#vue实例的生命周期" class="headerlink" title="vue实例的生命周期"></a>vue实例的生命周期</h2><p>概念：每一个Vue实例创建、运行、销毁的过程，就是生命周期；在实例的生命周期中，总是伴随着各种事件，这些事件就是生命周期函数；<br>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/10/18/hello-world/#more" rel="contents">
-              Read more &raquo;
+            <a class="btn" href="/2018/10/19/vue生命周期/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lijie-1024.github.io/2018/10/18/vue品牌管理案例/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cat_李小黑">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小黑's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/18/vue品牌管理案例/" itemprop="url">
+                  vue品牌管理案例
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-10-18 20:55:42" itemprop="dateCreated datePublished" datetime="2018-10-18T20:55:42+08:00">2018-10-18</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-10-19 16:04:41" itemprop="dateModified" datetime="2018-10-19T16:04:41+08:00">2018-10-19</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/vue/" itemprop="url" rel="index"><span itemprop="name">vue</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="品牌管理案例"><a href="#品牌管理案例" class="headerlink" title="品牌管理案例"></a>品牌管理案例</h2>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/10/18/vue品牌管理案例/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lijie-1024.github.io/2018/10/17/nodejs中模块和包的概念/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cat_李小黑">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小黑's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/17/nodejs中模块和包的概念/" itemprop="url">
+                  Node.js中模块和包的概念
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-10-17 15:47:00" itemprop="dateCreated datePublished" datetime="2018-10-17T15:47:00+08:00">2018-10-17</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-10-19 16:06:36" itemprop="dateModified" datetime="2018-10-19T16:06:36+08:00">2018-10-19</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/node-js/" itemprop="url" rel="index"><span itemprop="name">node.js</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="Node-js-中-模块-和-包-的概念"><a href="#Node-js-中-模块-和-包-的概念" class="headerlink" title="Node.js 中 模块 和 包 的概念"></a>Node.js 中 <code>模块</code> 和 <code>包</code> 的概念</h2><p>Node.js 由三部分组成：ECMAScript 核心 + 全局成员 + 模块成员</p>
+<blockquote>
+<p>模块成员，根据一些区别，又可以分为三大类： 核心模块、第三方模块、用户自定义模块<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/10/17/nodejs中模块和包的概念/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lijie-1024.github.io/2018/08/03/vscode插件使用大全/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="cat_李小黑">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="小黑's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/08/03/vscode插件使用大全/" itemprop="url">
+                  vscode插件使用大全
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-08-03 12:07:19" itemprop="dateCreated datePublished" datetime="2018-08-03T12:07:19+08:00">2018-08-03</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-10-19 12:25:58" itemprop="dateModified" datetime="2018-10-19T12:25:58+08:00">2018-10-19</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/工具类/" itemprop="url" rel="index"><span itemprop="name">工具类</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="vscode"><a href="#vscode" class="headerlink" title="vscode"></a>vscode</h2><p>VS Code（Visual Studio Code）是由微软研发的一款免费、开源的跨平台文本（代码）编辑器。前端开发几乎完美的编辑器。</p>
+<p>推荐我所使用的插件</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/08/03/vscode插件使用大全/#more" rel="contents">
+              阅读全文 &raquo;
             </a>
           </div>
           <!--/noindex-->
@@ -681,8 +1226,8 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">2</span>
-                    <span class="site-state-item-name">posts</span>
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
               
@@ -691,14 +1236,18 @@
                 
                 
                 <div class="site-state-item site-state-categories">
-                  
+                  <a href="/categories/index.html">
                     
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
-                    <span class="site-state-item-name">categories</span>
-                  
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
                 </div>
               
 
@@ -706,16 +1255,28 @@
                 
                 
                 <div class="site-state-item site-state-tags">
-                  
+                  <a href="/tags/index.html">
                     
                     
                       
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
-                    <span class="site-state-item-name">tags</span>
-                  
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
                 </div>
               
             </nav>
@@ -799,7 +1360,7 @@
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> v3.7.1</div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
 
 
 
@@ -807,12 +1368,25 @@
 
 
 
-  <div class="theme-info">Theme – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Mist</a> v6.4.2</div>
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Mist</a> v6.4.2</div>
 
 
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+    <span class="site-pv" title="总访问量">
+      <i class="fa fa-"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
 
 
 

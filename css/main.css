@@ -292,8 +292,8 @@ a:hover,
 span.exturl:hover,
 a:active,
 span.exturl:active {
-  color: #222;
-  border-bottom-color: #222;
+  color: rgba(254,18,138,0.77);
+  border-bottom-color: #666;
 }
 blockquote {
   margin: 0;
@@ -970,7 +970,7 @@ pre .javascript .function {
 }
 .btn:hover {
   border-color: #222;
-  color: #222;
+  color: rgba(254,18,138,0.77);
   background: #fff;
 }
 .btn +.btn {
@@ -1081,7 +1081,7 @@ pre .javascript .function {
   z-index: 1050;
   padding: 0 6px;
   width: 24px;
-  background: #222;
+  background: rgba(254,18,138,0.77);
   font-size: 12px;
   opacity: 1;
   color: #fff;
@@ -1603,7 +1603,7 @@ pre .javascript .function {
   border-bottom: none;
 }
 .post-nav-item a:hover {
-  color: #222;
+  color: rgba(254,18,138,0.77);
   border-bottom: none;
 }
 .post-nav-item a:active {
@@ -1897,7 +1897,7 @@ pre .javascript .function {
   margin-top: 5px;
   text-align: center;
   font-size: 14px;
-  color: #999;
+  color: rgba(254,18,138,0.77);
 }
 .site-state {
   overflow: hidden;
@@ -1969,7 +1969,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #227eff;
+  background: #d0ff34;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2016,11 +2016,11 @@ pre .javascript .function {
   margin-left: 10px;
 }
 .sidebar-nav .sidebar-nav-active {
-  color: #87daff;
-  border-bottom-color: #87daff;
+  color: rgba(254,18,138,0.77);
+  border-bottom-color: rgba(254,18,138,0.77);
 }
 .sidebar-nav .sidebar-nav-active:hover {
-  color: #87daff;
+  color: rgba(254,18,138,0.77);
 }
 .sidebar-panel {
   display: none;
@@ -2078,14 +2078,14 @@ pre .javascript .function {
   display: block;
 }
 .post-toc .nav .active > a {
-  color: #87daff;
-  border-bottom-color: #87daff;
+  color: rgba(254,18,138,0.77);
+  border-bottom-color: rgba(254,18,138,0.77);
 }
 .post-toc .nav .active-current > a {
-  color: #87daff;
+  color: rgba(254,18,138,0.77);
 }
 .post-toc .nav .active-current > a:hover {
-  color: #87daff;
+  color: rgba(254,18,138,0.77);
 }
 .footer {
   font-size: 14px;
@@ -2582,7 +2582,7 @@ pre .javascript .function {
   }
 }
 .page-post-detail .sidebar-toggle-line {
-  background: #87daff;
+  background: rgba(254,18,138,0.77);
 }
 .page-post-detail .comments {
   overflow: hidden;

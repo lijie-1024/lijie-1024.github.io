@@ -14,7 +14,7 @@
   
 
 
-<html class="theme-next mist use-motion" lang="en">
+<html class="theme-next mist use-motion" lang="zh-CN">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -93,7 +93,7 @@
     root: '/',
     scheme: 'Mist',
     version: '6.4.2',
-    sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -119,8 +119,8 @@
 <meta property="og:title" content="tags">
 <meta property="og:url" content="http://lijie-1024.github.io/tags/index.html">
 <meta property="og:site_name" content="小黑&#39;s Blog">
-<meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-10-18T17:35:16.116Z">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-10-19T04:36:38.565Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="tags">
 
@@ -179,7 +179,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -205,7 +205,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="Toggle navigation bar">
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -224,35 +224,40 @@
         
           
           <li class="menu-item menu-item-home">
-    <a href="/" rel="section">Home</a>
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-bell-o"></i> <br />首页</a>
   </li>
         
         
         
           
           <li class="menu-item menu-item-about">
-    <a href="/about/" rel="section">About</a>
+    <a href="/about/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-female"></i> <br />关于</a>
   </li>
         
         
         
           
           <li class="menu-item menu-item-tags menu-item-active">
-    <a href="/tags/" rel="section">Tags<span class="badge">2</span></a>
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
   </li>
         
         
         
           
           <li class="menu-item menu-item-categories">
-    <a href="/categories/" rel="section">Categories<span class="badge">1</span></a>
+    <a href="/categories/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />分类</a>
   </li>
         
         
         
           
           <li class="menu-item menu-item-schedule">
-    <a href="/schedule/" rel="section">Schedule</a>
+    <a href="/schedule/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />日程表</a>
   </li>
 
       
@@ -261,7 +266,8 @@
           
             <a href="javascript:;" class="popup-trigger">
           
-            Search</a>
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />搜索</a>
         </li>
       
     </ul>
@@ -307,7 +313,7 @@
     </span>
     <div class="local-search-input-wrapper">
       <input autocomplete="off"
-             placeholder="Searching..." spellcheck="false"
+             placeholder="搜索..." spellcheck="false"
              type="text" id="local-search-input">
     </div>
   </div>
@@ -364,7 +370,48 @@
       <div class="post-body">
         
         
-          
+          <div class="tag-cloud">
+            <div class="tag-cloud-title">
+                
+                
+                  
+                    
+                  
+                
+                  
+                    
+                  
+                
+                  
+                    
+                  
+                
+                  
+                    
+                  
+                
+                  
+                    
+                  
+                
+                  
+                    
+                  
+                
+                  
+                    
+                  
+                
+                  
+                    
+                  
+                
+                目前共计 8 个标签
+            </div>
+            <div class="tag-cloud-tags">
+              <a href="/tags/node-js/" style="font-size: 12px; color: #ccc">node.js</a> <a href="/tags/nodejs/" style="font-size: 12px; color: #ccc">nodejs</a> <a href="/tags/npm/" style="font-size: 21px; color: #6f6f6f">npm</a> <a href="/tags/vscode/" style="font-size: 12px; color: #ccc">vscode</a> <a href="/tags/vue/" style="font-size: 21px; color: #6f6f6f">vue</a> <a href="/tags/前端/" style="font-size: 30px; color: #111">前端</a> <a href="/tags/插件/" style="font-size: 12px; color: #ccc">插件</a> <a href="/tags/模块化/" style="font-size: 12px; color: #ccc">模块化</a>
+            </div>
+          </div>
         
       </div>
       
@@ -383,6 +430,11 @@
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MDM5NC8xNjkyMQ"></div>
+    </div>
 
   
 
@@ -427,8 +479,8 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">2</span>
-                    <span class="site-state-item-name">posts</span>
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
               
@@ -437,14 +489,18 @@
                 
                 
                 <div class="site-state-item site-state-categories">
-                  
+                  <a href="/categories/index.html">
                     
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
-                    <span class="site-state-item-name">categories</span>
-                  
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
                 </div>
               
 
@@ -452,16 +508,28 @@
                 
                 
                 <div class="site-state-item site-state-tags">
-                  
+                  <a href="/tags/index.html">
                     
                     
                       
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
-                    <span class="site-state-item-name">tags</span>
-                  
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">8</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
                 </div>
               
             </nav>
@@ -545,7 +613,7 @@
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> v3.7.1</div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.7.1</div>
 
 
 
@@ -553,12 +621,25 @@
 
 
 
-  <div class="theme-info">Theme – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Mist</a> v6.4.2</div>
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Mist</a> v6.4.2</div>
 
 
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+    <span class="site-pv" title="总访问量">
+      <i class="fa fa-"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
 
 
 
@@ -676,6 +757,20 @@
 
 
 
+  
+    <script type="text/javascript">
+      window.livereOptions = {
+        refer: 'tags/index.html'
+      };
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
