@@ -1364,7 +1364,7 @@ pre .javascript .function {
   .posts-collapse .post-meta {
     display: block;
     width: auto;
-    text-align: left;
+    text-align: center;
   }
 }
 .posts-collapse {
@@ -1568,6 +1568,7 @@ pre .javascript .function {
 }
 .post-button {
   margin-top: 40px;
+  text-align: center;
 }
 .posts-expand .post-tags {
   margin-top: 40px;
@@ -1576,7 +1577,7 @@ pre .javascript .function {
 .posts-expand .post-tags a {
   display: inline-block;
   margin-right: 10px;
-  font-size: 20px;
+  font-size: 13px;
 }
 .post-nav {
   display: table;
@@ -1967,7 +1968,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffa3f7;
+  background: #ff0b00;
 }
 .links-of-blogroll {
   font-size: 13px;
