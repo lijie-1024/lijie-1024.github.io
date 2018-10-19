@@ -115,25 +115,25 @@
 
 
 
-  <meta name="description" content="Node.js中模块和包的概念Node.js 由三部分组成：ECMAScript 核心 + 全局成员 + 模块成员模块成员，根据一些区别，又可以分为三大类： 核心模块、第三方模块、用户自定义模块">
-<meta name="keywords" content="node.js,npm,模块化">
+  <meta name="description" content="node.js中的express框架 掌握nodemon工具的使用 掌握express框架的基本用法 了解express框架提供的中间件的概念 能够连接并操作数据库 了解模块加载机制  1. 使用 nodemon 工具来自动重启web服务器 nodemon的作用：能够实时监听当前项目中，文件的变化；只要监听到了文件的变化，则 nodemon 工具，会自动重新启动 web 服务器，从而使最新的代码生">
+<meta name="keywords" content="node.js,express,npm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Node.js中模块和包的概念">
-<meta property="og:url" content="http://lijie-1024.github.io/2018/10/17/nodejs中模块和包的概念/index.html">
+<meta property="og:title" content="node.js中的express框架">
+<meta property="og:url" content="http://lijie-1024.github.io/2018/10/18/nodejs中express/index.html">
 <meta property="og:site_name" content="小黑&#39;s Blog">
-<meta property="og:description" content="Node.js中模块和包的概念Node.js 由三部分组成：ECMAScript 核心 + 全局成员 + 模块成员模块成员，根据一些区别，又可以分为三大类： 核心模块、第三方模块、用户自定义模块">
+<meta property="og:description" content="node.js中的express框架 掌握nodemon工具的使用 掌握express框架的基本用法 了解express框架提供的中间件的概念 能够连接并操作数据库 了解模块加载机制  1. 使用 nodemon 工具来自动重启web服务器 nodemon的作用：能够实时监听当前项目中，文件的变化；只要监听到了文件的变化，则 nodemon 工具，会自动重新启动 web 服务器，从而使最新的代码生">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-10-19T11:57:51.278Z">
+<meta property="og:updated_time" content="2018-10-19T12:03:06.755Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Node.js中模块和包的概念">
-<meta name="twitter:description" content="Node.js中模块和包的概念Node.js 由三部分组成：ECMAScript 核心 + 全局成员 + 模块成员模块成员，根据一些区别，又可以分为三大类： 核心模块、第三方模块、用户自定义模块">
+<meta name="twitter:title" content="node.js中的express框架">
+<meta name="twitter:description" content="node.js中的express框架 掌握nodemon工具的使用 掌握express框架的基本用法 了解express框架提供的中间件的概念 能够连接并操作数据库 了解模块加载机制  1. 使用 nodemon 工具来自动重启web服务器 nodemon的作用：能够实时监听当前项目中，文件的变化；只要监听到了文件的变化，则 nodemon 工具，会自动重新启动 web 服务器，从而使最新的代码生">
 
 
 
 
 
 
-  <link rel="canonical" href="http://lijie-1024.github.io/2018/10/17/nodejs中模块和包的概念/"/>
+  <link rel="canonical" href="http://lijie-1024.github.io/2018/10/18/nodejs中express/"/>
 
 
 
@@ -143,7 +143,7 @@
   };
 </script>
 
-  <title>Node.js中模块和包的概念 | 小黑's Blog</title>
+  <title>node.js中的express框架 | 小黑's Blog</title>
   
 
 
@@ -343,7 +343,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lijie-1024.github.io/2018/10/17/nodejs中模块和包的概念/">
+    <link itemprop="mainEntityOfPage" href="http://lijie-1024.github.io/2018/10/18/nodejs中express/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="cat_李小黑">
@@ -360,7 +360,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Node.js中模块和包的概念
+          <h1 class="post-title" itemprop="name headline">node.js中的express框架
               
             
           </h1>
@@ -385,7 +385,7 @@
                 
               
 
-              <time title="创建时间：2018-10-17 15:47:00" itemprop="dateCreated datePublished" datetime="2018-10-17T15:47:00+08:00">2018-10-17</time>
+              <time title="创建时间：2018-10-18 10:47:00" itemprop="dateCreated datePublished" datetime="2018-10-18T10:47:00+08:00">2018-10-18</time>
             
 
             
@@ -402,7 +402,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-10-19 19:57:51" itemprop="dateModified" datetime="2018-10-19T19:57:51+08:00">2018-10-19</time>
+                <time title="修改时间：2018-10-19 20:03:06" itemprop="dateModified" datetime="2018-10-19T20:03:06+08:00">2018-10-19</time>
               
             
           </span>
@@ -461,84 +461,141 @@
       
 
       
-        <h2 id="Node-js中模块和包的概念"><a href="#Node-js中模块和包的概念" class="headerlink" title="Node.js中模块和包的概念"></a>Node.js中模块和包的概念</h2><p>Node.js 由三部分组成：ECMAScript 核心 + 全局成员 + 模块成员<br>模块成员，根据一些区别，又可以分为三大类： 核心模块、第三方模块、用户自定义模块<br><a id="more"></a></p>
-<h3 id="1-模块成员的分类"><a href="#1-模块成员的分类" class="headerlink" title="1 模块成员的分类"></a>1 模块成员的分类</h3><h4 id="1-1-核心模块"><a href="#1-1-核心模块" class="headerlink" title="1.1 核心模块"></a>1.1 核心模块</h4><ol>
-<li><strong>什么是核心模块：</strong><ul>
-<li>随着 Node.js 的安装包，一同安装到本地的模块，叫做核心模块；</li>
-<li>例如：<code>fs</code>，<code>path</code>等模块，都是由 Node.js 官方提供的核心模块；</li>
-<li>只要大家在计算机中，安装了 Node 这个应用程序，那么，我们的计算机中就已经安装了所有的 核心模块；</li>
+        <h1 id="node-js中的express框架"><a href="#node-js中的express框架" class="headerlink" title="node.js中的express框架"></a>node.js中的express框架</h1><ol>
+<li>掌握nodemon工具的使用</li>
+<li>掌握express框架的基本用法</li>
+<li>了解express框架提供的中间件的概念</li>
+<li>能够连接并操作数据库</li>
+<li>了解模块加载机制</li>
+</ol>
+<h2 id="1-使用-nodemon-工具来自动重启web服务器"><a href="#1-使用-nodemon-工具来自动重启web服务器" class="headerlink" title="1. 使用 nodemon 工具来自动重启web服务器"></a>1. 使用 <code>nodemon</code> 工具来自动重启web服务器</h2><ul>
+<li><strong>nodemon的作用</strong>：能够<strong>实时监听</strong>当前项目中，文件的变化；只要监听到了文件的变化，则 nodemon 工具，会自动重新启动 web 服务器，从而使最新的代码生效；免去了程序员手动重启服务器的困扰；</li>
+<li><strong>如何安装：</strong>运行 <code>npm i nodemon -g</code>  全局安装即可；</li>
+<li><strong>如何使用：</strong><ul>
+<li>之前使用 <code>node 要执行的文件路径</code> 来运行 Node.js 代码；</li>
+<li>现在使用 <code>nodemon 要执行的文件路径</code> 来运行 Node.js 代码；</li>
 </ul>
 </li>
-<li><strong>如何使用核心模块</strong>：<code>require(&#39;核心模块标识符&#39;)</code></li>
+<li><strong>注意：</strong>今后在开发Web项目的时候，推荐使用 <code>nodemon</code> 来启动 web 服务器</li>
+</ul>
+<h2 id="2-Node-中开发web项目的框架-express"><a href="#2-Node-中开发web项目的框架-express" class="headerlink" title="2. Node 中开发web项目的框架 - express"></a>2. Node 中开发web项目的框架 - express</h2><blockquote>
+<p>定义（什么是Express）：一个快速的网站开发框架，封装了原生的http模块，用起来更方便；API更人性化</p>
+</blockquote>
+<h3 id="2-1-express-框架的特点"><a href="#2-1-express-框架的特点" class="headerlink" title="2.1 express 框架的特点"></a>2.1 express 框架的特点</h3><ol>
+<li>基于Node.js平台之上，进一步封装了 <code>http</code> 模块，从而提供了更好用，更友好的 API</li>
+<li>使用Express创建网站，比使用原生的http模块更加方便；</li>
+<li>Express 并没有覆盖 原生 http 模块中的方法，而是基于 原生方法之上，做了更友好的封装，让用户体验更好</li>
 </ol>
-<h4 id="2-2-第三方模块"><a href="#2-2-第三方模块" class="headerlink" title="2.2 第三方模块"></a>2.2 第三方模块</h4><ol>
-<li><strong>什么是第三方模块：</strong><ul>
-<li>一些非官方提供的模块，叫做第三方模块；</li>
-<li>注意，第三方模块，并不在我们的计算机上；</li>
-<li>如果大家需要使用某些第三方模块，必须去一个叫做 <code>NPM</code> 的网站上搜索并下载才能使用；</li>
+<h3 id="2-2-express-框架的安装和基本使用"><a href="#2-2-express-框架的安装和基本使用" class="headerlink" title="2.2 express 框架的安装和基本使用"></a>2.2 express 框架的安装和基本使用</h3><ol>
+<li><strong>安装：</strong>运行 <code>npm i express -S</code> 即可安装</li>
+<li><strong>创建基本的 <code>express</code> 服务器：</strong><ul>
+<li>导入 <code>express</code> 第三方模块；</li>
+<li><strong>创建服务器的实例：</strong>调用 <code>const app = express()</code> 方法；</li>
+<li>通过 <code>app.get()</code> 或 <code>app.post()</code> 方法，来监听客户端的 <code>get</code> 或 <code>post</code> 请求，具体语法：<ul>
+<li><strong>监听 <code>GET</code> 请求：</strong><code>app.get(&#39;请求地址&#39;, (req, res) =&gt; { 处理函数 })</code> </li>
+<li><strong>监听 <code>POST</code> 请求：</strong> <code>app.post(&#39;请求地址&#39;, (req, res) =&gt; { 处理函数 })</code> </li>
 </ul>
 </li>
-<li><strong>如何使用第三方模块：</strong><ul>
-<li>先从 npm 官网上下载指定的第三方模块</li>
-<li>使用 <code>require(&#39;第三方模块的名称标识符&#39;)</code>来导入这个模块</li>
-<li>根据 第三方模块的 官方文档，尝试使用</li>
+<li><strong>启动 express 服务器：</strong>通过 <code>app.listen(端口, IP地址, 启动成功后的回调函数)</code> 启动服务器；</li>
 </ul>
 </li>
 </ol>
-<h4 id="2-3-用户自定义模块"><a href="#2-3-用户自定义模块" class="headerlink" title="2.3 用户自定义模块"></a>2.3 用户自定义模块</h4><ol>
-<li><strong>什么是用户模块：</strong><ul>
-<li>程序员在自己项目中写的 Javascript 文件，就叫做 用户自定义模块；</li>
+<h3 id="2-3-express-中的快捷方法"><a href="#2-3-express-中的快捷方法" class="headerlink" title="2.3 express 中的快捷方法"></a>2.3 express 中的快捷方法</h3><ol>
+<li><code>res.send()</code><ol>
+<li>支持 发送 字符串 <code>Content-Type: text/html;</code></li>
+<li>支持 发送 对象 或 数组 <code>Content-Type: application/json</code></li>
+<li>支持 发送 Buffer 此时会当作文件下载；</li>
+</ol>
+</li>
+<li><code>res.sendFile()</code><ul>
+<li>用法1：<code>res.sendFile(path.join(__dirname, &#39;./view/index.html&#39;))</code></li>
+<li>用法2：<code>res.sendFile(&#39;./view/movie.html&#39;, { root: __dirname })</code></li>
+<li>注意：<code>res.sendFile()</code> 可以向浏览器发送 静态页面；</li>
 </ul>
 </li>
-<li><strong>如何使用用户模块：</strong><code>require(&#39;路径标识符&#39;)</code></li>
 </ol>
-<h3 id="2-包的定义和使用"><a href="#2-包的定义和使用" class="headerlink" title="2 包的定义和使用"></a>2 包的定义和使用</h3><h4 id="2-1-什么是"><a href="#2-1-什么是" class="headerlink" title="2.1 什么是"></a>2.1 什么是</h4><ol>
-<li>英文名叫做 <code>Packages</code>，包是在模块基础上更深一步的抽象；</li>
-<li>包的目的：方便分发和推广基于 CommonJS 规范实现的 应用程序 或 类库；</li>
-<li>包可以看作是 <strong>模块</strong>、<strong>代码</strong> 和 <strong>其它资源</strong> 组合起来形成的 独立作用域；</li>
-<li>相当于一个入口文件，整合了其他模块,<br>整合资源，向外暴露</li>
-</ol>
-<h4 id="2-2-规范的包结构"><a href="#2-2-规范的包结构" class="headerlink" title="2.2 规范的包结构"></a>2.2 规范的包结构</h4><ol>
-<li><strong>包都要以一个单独的目录而存在</strong>；</li>
-<li><strong><code>package.json</code> 必须在包的顶层目录下</strong>；</li>
-<li><strong><code>package.json</code> 文件必须符合 JSON 格式，并且必须包含如下三个属性：<code>name</code>, <code>version</code>, <code>main</code></strong><ul>
-<li><strong>name</strong>: 包的名字</li>
-<li><strong>version</strong>: 包的版本号</li>
-<li><strong>main</strong>: 表示包的入口文件</li>
-</ul>
-</li>
-<li>二进制文件应该在<strong>bin 目录</strong>下;<br>javaScript 代码应该在<strong>lib 目录</strong>下;</li>
-<li>文档应该在<strong>doc 目录</strong>下;<br>单元测试应该在<strong>test 目录</strong>下;</li>
-<li>Node.js 对包要求并没有那么严格，只要顶层目录下有<code>package.json</code>，并<strong>符合基本规范</strong>即可;</li>
-</ol>
-<h4 id="2-3-包描述文件-package-json【了解】"><a href="#2-3-包描述文件-package-json【了解】" class="headerlink" title="2.3 包描述文件 package.json【了解】"></a>2.3 包描述文件 package.json【了解】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">name：包的名称，必须是唯一</span><br><span class="line">description：包的简要说明</span><br><span class="line">version：符合语义化版本识别规范的版本字符串</span><br><span class="line">keywords：关键字数据，通常用于搜索</span><br><span class="line">maintainers：维护者数组，每个元素要包含name、email、web可选字段</span><br><span class="line">contributors：贡献者数组，格式与maintainers相同。包的坐着应该是贡献者数据的第一个元素</span><br><span class="line">bugs：提交bug的地址，可以是网址或者电子邮件地址</span><br><span class="line">licenses：许可证数组，每个元素要包含type和url字段</span><br><span class="line">repositories：仓库托管地址数组，每个元素要包含type、url和path字段</span><br><span class="line">dependencies：包的依赖，一个关联数组，由包名称和版本号组成。</span><br><span class="line">devDependencies：开发依赖项，表示一个包在开发期间用到的依赖项</span><br></pre></td></tr></table></figure>
-<h2 id="模块作用域-和-全局作用域"><a href="#模块作用域-和-全局作用域" class="headerlink" title="模块作用域 和 全局作用域"></a>模块作用域 和 全局作用域</h2><blockquote>
-<p>在Node.js中有两个作用域，分别是 全局作用域 和 模块作用域；</p>
+<h3 id="2-4-使用-express-static-快速托管静态资源"><a href="#2-4-使用-express-static-快速托管静态资源" class="headerlink" title="2.4 使用 express.static() 快速托管静态资源"></a>2.4 使用 <code>express.static()</code> 快速托管静态资源</h3><blockquote>
+<p>如果我们网站中，有很多静态资源需要被外界访问，此时，使用 res.sendFile 就有点力不从心了;</p>
+<p>这时候，express 框架，为我们提供了 <code>express.static(&#39;静态资源目录&#39;)</code> </p>
+<p>来快速托管指定目录下的所有静态资源文件；</p>
 </blockquote>
 <ol>
-<li>全局作用域使用 <code>global</code> 来访问，类似于<code>浏览器中的window</code>；</li>
-<li>每个 Javascript 文件，都是一个单独模块，每个模块都有自己独立的作用域，因此：模块中的成员，默认无法被其它模块访问。</li>
-</ol>
-<h3 id="1-使用-global-全局作用域在模块之间共享成员"><a href="#1-使用-global-全局作用域在模块之间共享成员" class="headerlink" title="1 使用 global 全局作用域在模块之间共享成员"></a>1 使用 global 全局作用域在模块之间共享成员</h3><ol>
-<li>如果在某个模块内部，想为 全局的 global 作用域挂载一些属性，需要显示的调用<code>global.***</code>来挂载；</li>
-<li>注意：在开发中，一般情况下，不推荐使用<code>global</code>全局作用域来共享成员，会存在全局变量污染问题；</li>
-</ol>
-<h3 id="2-模块作用域"><a href="#2-模块作用域" class="headerlink" title="2 模块作用域"></a>2 模块作用域</h3><ol>
-<li><p><strong>module（模块标识）</strong></p>
-<p>module 属性是 Common JS 规范中定义的，它是一个对象，表示当前这个具体的 js 模块；</p>
+<li><strong>语法1：</strong> <code>app.use(express.static(&#39;public&#39;));</code><ul>
+<li><code>app.use()</code>方法，是专门用来注册 中间件；</li>
+<li><code>express.static</code> 是express的内置中间件；</li>
+</ul>
 </li>
-<li><p><strong>require（引用模块）</strong></p>
-<p>每一个实现了 CommonJS 规范的模块，必须定义一个 require() 函数，使用这个 require 函数，就能够 很方便的导入其它 模块中的成员，供自己使用；</p>
-</li>
-<li><p><strong>exports（暴露模块成员）</strong></p>
-<p>每一个模块中，如果想要把自己的一些私有成员，暴露给别人使用，那么，必须实现一个 exports 对象，通过exports对象，可以方便的把模块内私有的成员，暴露给外界使用；</p>
-</li>
+<li><strong>语法2：</strong><code>app.use(&#39;/虚拟目录&#39;, express.static(&#39;public&#39;))</code></li>
 </ol>
-<h3 id="3-module-exports-和-exports-的关系"><a href="#3-module-exports-和-exports-的关系" class="headerlink" title="3 module.exports 和 exports 的关系"></a>3 module.exports 和 exports 的关系</h3><ol>
-<li><code>module.exports</code> 和 <code>exports</code> 默认引用了同一个空对象；</li>
-<li><code>module.exports</code> 和 <code>exports</code> 作用一致，都可以向外暴露成员；</li>
-<li>一个模块作用域中，向外暴露私有成员时，永远以 <code>module.exports</code> 为准；</li>
+<h3 id="2-5-为-express-框架配置模板引擎渲染动态页面"><a href="#2-5-为-express-框架配置模板引擎渲染动态页面" class="headerlink" title="2.5 为 express 框架配置模板引擎渲染动态页面"></a>2.5 为 express 框架配置模板引擎渲染动态页面</h3><ol>
+<li>安装 ejs 模板引擎<code>npm i ejs -S</code></li>
+<li>使用 app.set() 配置默认的模板引擎 <code>app.set(&#39;view engine&#39;, &#39;ejs&#39;)</code></li>
+<li>使用 app.set() 配置默认模板页面的存放路径 <code>app.set(&#39;views&#39;, &#39;./views&#39;)</code></li>
+<li>使用 res.render() 来渲染模板页面<code>res.render(&#39;index.ejs&#39;, { 要渲染的数据对象 })</code>，注意，模板页面的 后缀名，可以省略不写！</li>
 </ol>
+<h3 id="2-6-在-express-中配置-art-template"><a href="#2-6-在-express-中配置-art-template" class="headerlink" title="2.6 在 express 中配置 art-template"></a>2.6 在 express 中配置 art-template</h3><ol>
+<li>安装 两个包 <code>cnpm i art-template express-art-template -S</code></li>
+<li>自定义一个模板引擎  <code>app.engine(&#39;自定义模板引擎的名称&#39;, 渲染函数)</code></li>
+<li>将自定义的模板引擎，配置为 express 的默认模板引擎  <code>app.set(&#39;view engine&#39;, &#39;具体模板引擎的名称&#39;)</code></li>
+<li>配置 模板页面得存放路径 <code>app.set(&#39;views&#39;, &#39;路径&#39;)</code></li>
+</ol>
+<h2 id="3-使用-express-框架中提供的路由来分发请求"><a href="#3-使用-express-框架中提供的路由来分发请求" class="headerlink" title="3. 使用 express 框架中提供的路由来分发请求"></a>3. 使用 express 框架中提供的路由来分发请求</h2><ol>
+<li><strong>什么是路由：</strong>路由就是对应关系；</li>
+<li><strong>什么叫做后端路由：</strong>前端请求的URL地址，都要对应一个后端的处理函数，那么 这种URL地址到 处理函数之间的对应关系，就叫做后端路由；</li>
+<li>在Express中，<strong>路由的主要职责</strong> 就是 <strong>把请求分发到对应的处理函数中</strong>；</li>
+<li>在Express中，如何 定义并使用路由呢？</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. 封装单独的 router.js 路由模块文件</span></span><br><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>)</span><br><span class="line"><span class="comment">// 创建路由对象</span></span><br><span class="line"><span class="keyword">const</span> router = express.Router()</span><br><span class="line"></span><br><span class="line">router.get(<span class="string">'/'</span>, (req, res)=&gt;&#123;&#125;)</span><br><span class="line">router.get(<span class="string">'/movie'</span>, (req, res)=&gt;&#123;&#125;)</span><br><span class="line">router.get(<span class="string">'/about'</span>, (req, res)=&gt;&#123;&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 导出路由对象</span></span><br><span class="line"><span class="built_in">module</span>.exports = router</span><br></pre></td></tr></table></figure>
+<ol>
+<li>express 创建的 app 服务器，如何使用 路由模块呢？</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 导入自己的路由模块</span></span><br><span class="line"><span class="keyword">const</span> router = <span class="built_in">require</span>(<span class="string">'./router.js'</span>)</span><br><span class="line"><span class="comment">// 使用 app.use() 来注册路由</span></span><br><span class="line">app.use(router)</span><br></pre></td></tr></table></figure>
+<h2 id="4-Express-框架里-中间件的概念"><a href="#4-Express-框架里-中间件的概念" class="headerlink" title="4. Express 框架里 中间件的概念"></a>4. Express 框架里 中间件的概念</h2><h3 id="4-1-什么是中间件"><a href="#4-1-什么是中间件" class="headerlink" title="4.1 什么是中间件"></a>4.1 什么是中间件</h3><blockquote>
+<p>定义：中间件就是一个处理函数；只不过这个函数比较特殊，包含了三个参数，分别是 <code>req</code>，<code>res</code>，<code>next</code></p>
+<p>注意：中间件方法中的三个参数：</p>
+<ul>
+<li>req：请求对象；</li>
+<li>res：响应对象；</li>
+<li>next：next()可以被调用，表示调用下一个中间件方法；</li>
+</ul>
+</blockquote>
+<h3 id="4-2-Express-框架中对中间件的5种分类"><a href="#4-2-Express-框架中对中间件的5种分类" class="headerlink" title="4.2 Express 框架中对中间件的5种分类"></a>4.2 Express 框架中对中间件的5种分类</h3><ol>
+<li><strong>应用级别的中间件：</strong> 挂载到 app 上的中间件 <code>app.get(&#39;URL地址&#39;, （req, res, next）=&gt; {})</code>；</li>
+<li><strong>路由级别的中间件：</strong> 挂载到 router 对象上的中间件  <code>router.get(&#39;url地址&#39;, (req, res, next)=&gt;{})</code></li>
+<li><strong>错误级别的中间件：</strong> 回调函数中，有四个参数 <code>app.use((err, req, res, next)=&gt;{})</code></li>
+<li><strong>唯一内置的中间件：</strong> <code>express.static()</code></li>
+<li><strong>第三方中间件：</strong> 非express框架提供的，需要程序员手动安装才能使用的中间件；<code>body-parser</code> 解析post 表单数据</li>
+</ol>
+<blockquote>
+<p>中间件的概念，了解即可，因为实际开发中，我们都直接使用第三方现成的中间件；</p>
+</blockquote>
+<h3 id="4-3-自己模拟一个解析表单数据的中间件"><a href="#4-3-自己模拟一个解析表单数据的中间件" class="headerlink" title="4.3 自己模拟一个解析表单数据的中间件"></a>4.3 自己模拟一个解析表单数据的中间件</h3><h2 id="5-Express-中进行数据库操作"><a href="#5-Express-中进行数据库操作" class="headerlink" title="5. Express 中进行数据库操作"></a>5. Express 中进行数据库操作</h2><h3 id="配置-MySql-数据库环境"><a href="#配置-MySql-数据库环境" class="headerlink" title="配置 MySql 数据库环境"></a>配置 MySql 数据库环境</h3><h3 id="mysql-第三方模块的介绍和基本配置"><a href="#mysql-第三方模块的介绍和基本配置" class="headerlink" title="mysql 第三方模块的介绍和基本配置"></a>mysql 第三方模块的介绍和基本配置</h3><h3 id="使用-mysql-第三方模块实现-CRUD"><a href="#使用-mysql-第三方模块实现-CRUD" class="headerlink" title="使用 mysql 第三方模块实现 CRUD"></a>使用 mysql 第三方模块实现 CRUD</h3><h2 id="6-模块加载机制"><a href="#6-模块加载机制" class="headerlink" title="6. 模块加载机制"></a>6. 模块加载机制</h2><h3 id="优先从缓存中加载"><a href="#优先从缓存中加载" class="headerlink" title="优先从缓存中加载"></a>优先从缓存中加载</h3><ul>
+<li>当一个模块初次被 <code>require</code> 的时候，会执行模块中的代码，当第二次加载相同模块的时候，会优先从缓存中查找，看有没有这样的一个模块！</li>
+<li>好处：提高模块的加载速度；不需要每次都重新执行并加载模块！</li>
+</ul>
+<h3 id="核心模块的加载机制"><a href="#核心模块的加载机制" class="headerlink" title="核心模块的加载机制"></a>核心模块的加载机制</h3><ul>
+<li>先查找缓存；如果缓存中没有，再去加载核心模块；</li>
+</ul>
+<h3 id="用户模块的加载机制"><a href="#用户模块的加载机制" class="headerlink" title="用户模块的加载机制"></a>用户模块的加载机制</h3><ul>
+<li><p>先查找缓存；</p>
+</li>
+<li><p>如果缓存中没有则尝试加载用户模块；</p>
+</li>
+<li><p>如果在加载用户模块时候省略了后缀名，则：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">首先，严格按照指定的名称去查找</span><br><span class="line">其次，尝试加载后缀名是 .js 的文件</span><br><span class="line">如果没有.js的文件，则尝试加载 .json 结尾的文件</span><br><span class="line">如果没有 .json 的文件，则尝试加载 .node 结尾的文件</span><br><span class="line">查找规则：index  -&gt;  index.js   -&gt;   index.json   -&gt;  index.node</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="第三方模块的加载机制【了解】"><a href="#第三方模块的加载机制【了解】" class="headerlink" title="第三方模块的加载机制【了解】"></a>第三方模块的加载机制【了解】</h3><ol>
+<li>先在项目根目录中查找<code>node_modules</code>文件夹</li>
+<li>在<code>node_modules</code>文件夹下，查找模块相关的文件夹</li>
+<li>在对应的文件夹下，查找<code>package.json</code>的文件</li>
+<li>查找<code>package.json</code>文件中的<code>main</code>属性（指定了模块的入口文件）</li>
+<li>如果找到了<code>main</code>属性，同时，<code>main</code>属性指定的文件路径存在，那么尝试加载指定的文件模块</li>
+<li>加入没有<code>main</code>属性，或者<code>main</code>属性对应的文件不存在，或者没有<code>package.json</code>,那么会依次尝试加载<code>index.js</code>，<code>index.json</code>,<code>index.node</code>;</li>
+<li>如果没有<code>index</code>相关的文件，或者没有指定模块对应文件夹，或者，当前项目根目录中没有<code>node_modules</code>文件夹，则向上一层目录中查找<code>node_modules</code>，查找规则同上！</li>
+<li>最后，如果在项目所在磁盘的盘符根目录中，还找不到对应模块，则报错：<code>cannot find module ***</code></li>
+</ol>
+<h2 id="相关文章"><a href="#相关文章" class="headerlink" title="相关文章"></a>相关文章</h2><p><a href="https://aui.github.io/art-template/zh-cn/docs/index.html" target="_blank" rel="noopener">art-template 官方文档</a></p>
 
       
     </div>
@@ -589,7 +646,7 @@
     <strong>本文作者： </strong>cat_李小黑</li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://lijie-1024.github.io/2018/10/17/nodejs中模块和包的概念/" title="Node.js中模块和包的概念">http://lijie-1024.github.io/2018/10/17/nodejs中模块和包的概念/</a>
+    <a href="http://lijie-1024.github.io/2018/10/18/nodejs中express/" title="node.js中的express框架">http://lijie-1024.github.io/2018/10/18/nodejs中express/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
@@ -604,9 +661,9 @@
           
             <a href="/tags/node-js/" rel="tag"># node.js</a>
           
-            <a href="/tags/npm/" rel="tag"># npm</a>
+            <a href="/tags/express/" rel="tag"># express</a>
           
-            <a href="/tags/模块化/" rel="tag"># 模块化</a>
+            <a href="/tags/npm/" rel="tag"># npm</a>
           
         </div>
       
@@ -619,8 +676,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/10/16/npm概述/" rel="next" title="NPM概述">
-                <i class="fa fa-chevron-left"></i> NPM概述
+              <a href="/2018/10/17/nodejs中模块和包的概念/" rel="next" title="Node.js中模块和包的概念">
+                <i class="fa fa-chevron-left"></i> Node.js中模块和包的概念
               </a>
             
           </div>
@@ -628,10 +685,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/10/18/nodejs中express/" rel="prev" title="node.js中的express框架">
-                node.js中的express框架 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -841,7 +894,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Node-js中模块和包的概念"><span class="nav-number">1.</span> <span class="nav-text">Node.js中模块和包的概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-模块成员的分类"><span class="nav-number">1.1.</span> <span class="nav-text">1 模块成员的分类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-核心模块"><span class="nav-number">1.1.1.</span> <span class="nav-text">1.1 核心模块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-第三方模块"><span class="nav-number">1.1.2.</span> <span class="nav-text">2.2 第三方模块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-用户自定义模块"><span class="nav-number">1.1.3.</span> <span class="nav-text">2.3 用户自定义模块</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-包的定义和使用"><span class="nav-number">1.2.</span> <span class="nav-text">2 包的定义和使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-什么是"><span class="nav-number">1.2.1.</span> <span class="nav-text">2.1 什么是</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-规范的包结构"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.2 规范的包结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-3-包描述文件-package-json【了解】"><span class="nav-number">1.2.3.</span> <span class="nav-text">2.3 包描述文件 package.json【了解】</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模块作用域-和-全局作用域"><span class="nav-number">2.</span> <span class="nav-text">模块作用域 和 全局作用域</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-使用-global-全局作用域在模块之间共享成员"><span class="nav-number">2.1.</span> <span class="nav-text">1 使用 global 全局作用域在模块之间共享成员</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-模块作用域"><span class="nav-number">2.2.</span> <span class="nav-text">2 模块作用域</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-module-exports-和-exports-的关系"><span class="nav-number">2.3.</span> <span class="nav-text">3 module.exports 和 exports 的关系</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#node-js中的express框架"><span class="nav-number">1.</span> <span class="nav-text">node.js中的express框架</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-使用-nodemon-工具来自动重启web服务器"><span class="nav-number">1.1.</span> <span class="nav-text">1. 使用 nodemon 工具来自动重启web服务器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Node-中开发web项目的框架-express"><span class="nav-number">1.2.</span> <span class="nav-text">2. Node 中开发web项目的框架 - express</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-express-框架的特点"><span class="nav-number">1.2.1.</span> <span class="nav-text">2.1 express 框架的特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-express-框架的安装和基本使用"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.2 express 框架的安装和基本使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-express-中的快捷方法"><span class="nav-number">1.2.3.</span> <span class="nav-text">2.3 express 中的快捷方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-使用-express-static-快速托管静态资源"><span class="nav-number">1.2.4.</span> <span class="nav-text">2.4 使用 express.static() 快速托管静态资源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-为-express-框架配置模板引擎渲染动态页面"><span class="nav-number">1.2.5.</span> <span class="nav-text">2.5 为 express 框架配置模板引擎渲染动态页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6-在-express-中配置-art-template"><span class="nav-number">1.2.6.</span> <span class="nav-text">2.6 在 express 中配置 art-template</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-使用-express-框架中提供的路由来分发请求"><span class="nav-number">1.3.</span> <span class="nav-text">3. 使用 express 框架中提供的路由来分发请求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Express-框架里-中间件的概念"><span class="nav-number">1.4.</span> <span class="nav-text">4. Express 框架里 中间件的概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-什么是中间件"><span class="nav-number">1.4.1.</span> <span class="nav-text">4.1 什么是中间件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-Express-框架中对中间件的5种分类"><span class="nav-number">1.4.2.</span> <span class="nav-text">4.2 Express 框架中对中间件的5种分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-自己模拟一个解析表单数据的中间件"><span class="nav-number">1.4.3.</span> <span class="nav-text">4.3 自己模拟一个解析表单数据的中间件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-Express-中进行数据库操作"><span class="nav-number">1.5.</span> <span class="nav-text">5. Express 中进行数据库操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#配置-MySql-数据库环境"><span class="nav-number">1.5.1.</span> <span class="nav-text">配置 MySql 数据库环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mysql-第三方模块的介绍和基本配置"><span class="nav-number">1.5.2.</span> <span class="nav-text">mysql 第三方模块的介绍和基本配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用-mysql-第三方模块实现-CRUD"><span class="nav-number">1.5.3.</span> <span class="nav-text">使用 mysql 第三方模块实现 CRUD</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-模块加载机制"><span class="nav-number">1.6.</span> <span class="nav-text">6. 模块加载机制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#优先从缓存中加载"><span class="nav-number">1.6.1.</span> <span class="nav-text">优先从缓存中加载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#核心模块的加载机制"><span class="nav-number">1.6.2.</span> <span class="nav-text">核心模块的加载机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用户模块的加载机制"><span class="nav-number">1.6.3.</span> <span class="nav-text">用户模块的加载机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第三方模块的加载机制【了解】"><span class="nav-number">1.6.4.</span> <span class="nav-text">第三方模块的加载机制【了解】</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相关文章"><span class="nav-number">1.7.</span> <span class="nav-text">相关文章</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1026,7 +1079,7 @@
   
     <script type="text/javascript">
       window.livereOptions = {
-        refer: '2018/10/17/nodejs中模块和包的概念/'
+        refer: '2018/10/18/nodejs中express/'
       };
       (function(d, s) {
         var j, e = d.getElementsByTagName(s)[0];
