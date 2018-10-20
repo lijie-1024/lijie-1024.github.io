@@ -116,20 +116,25 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="小黑&#39;s Blog">
-<meta property="og:url" content="http://lijie-1024.github.io/index.html">
+  <meta name="description" content="Vue中的动画 为什么要有动画：动画能够增加页面趣味性，目的是为了让用户更好的理解页面的功能； Vue中的动画，都是简单的过渡动画，并不会有 CSS3 那么炫酷；  Vue中动画的基本介绍 每个都动画分为两部分： 入场动画：从不可见（flag = false） -&amp;gt; 可见（flag = true） 出场动画：可见（flag = true） -&amp;gt; 不可见（flag = false）">
+<meta name="keywords" content="vue,前端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue中的动画">
+<meta property="og:url" content="http://lijie-1024.github.io/2018/08/23/vue动画/index.html">
 <meta property="og:site_name" content="小黑&#39;s Blog">
+<meta property="og:description" content="Vue中的动画 为什么要有动画：动画能够增加页面趣味性，目的是为了让用户更好的理解页面的功能； Vue中的动画，都是简单的过渡动画，并不会有 CSS3 那么炫酷；  Vue中动画的基本介绍 每个都动画分为两部分： 入场动画：从不可见（flag = false） -&amp;gt; 可见（flag = true） 出场动画：可见（flag = true） -&amp;gt; 不可见（flag = false）">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-10-20T03:48:06.419Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小黑&#39;s Blog">
+<meta name="twitter:title" content="vue中的动画">
+<meta name="twitter:description" content="Vue中的动画 为什么要有动画：动画能够增加页面趣味性，目的是为了让用户更好的理解页面的功能； Vue中的动画，都是简单的过渡动画，并不会有 CSS3 那么炫酷；  Vue中动画的基本介绍 每个都动画分为两部分： 入场动画：从不可见（flag = false） -&amp;gt; 可见（flag = true） 出场动画：可见（flag = true） -&amp;gt; 不可见（flag = false）">
 
 
 
 
 
 
-  <link rel="canonical" href="http://lijie-1024.github.io/"/>
+  <link rel="canonical" href="http://lijie-1024.github.io/2018/08/23/vue动画/"/>
 
 
 
@@ -139,7 +144,7 @@
   };
 </script>
 
-  <title>小黑's Blog</title>
+  <title>vue中的动画 | 小黑's Blog</title>
   
 
 
@@ -186,8 +191,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -224,7 +228,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
     <a href="/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-bell-o"></i> <br />首页</a>
   </li>
@@ -323,547 +327,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lijie-1024.github.io/2018/10/18/nodejs中express/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cat_李小黑">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小黑's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/18/nodejs中express/" itemprop="url">
-                  node.js中的express框架
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-10-18 10:47:00" itemprop="dateCreated datePublished" datetime="2018-10-18T10:47:00+08:00">2018-10-18</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-10-19 20:03:06" itemprop="dateModified" datetime="2018-10-19T20:03:06+08:00">2018-10-19</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/node-js/" itemprop="url" rel="index"><span itemprop="name">node.js</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          node.js中的express框架
-掌握nodemon工具的使用
-掌握express框架的基本用法
-了解express框架提供的中间件的概念
-能够连接并操作数据库
-了解模块加载机制
-
-1. 使用 nodemon 工具来自动重启web服务器
-nodemon的作用：能够实时监听当前项目中，文件的变化；
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/10/18/nodejs中express/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lijie-1024.github.io/2018/10/17/nodejs中模块和包的概念/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cat_李小黑">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小黑's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/17/nodejs中模块和包的概念/" itemprop="url">
-                  Node.js中模块和包的概念
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-10-17 15:47:00" itemprop="dateCreated datePublished" datetime="2018-10-17T15:47:00+08:00">2018-10-17</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-10-19 19:57:51" itemprop="dateModified" datetime="2018-10-19T19:57:51+08:00">2018-10-19</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/node-js/" itemprop="url" rel="index"><span itemprop="name">node.js</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="Node-js中模块和包的概念"><a href="#Node-js中模块和包的概念" class="headerlink" title="Node.js中模块和包的概念"></a>Node.js中模块和包的概念</h2><p>Node.js 由三部分组成：ECMAScript 核心 + 全局成员 + 模块成员<br>模块成员，根据一些区别，又可以分为三大类： 核心模块、第三方模块、用户自定义模块<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/10/17/nodejs中模块和包的概念/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lijie-1024.github.io/2018/10/16/npm概述/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cat_李小黑">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小黑's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/16/npm概述/" itemprop="url">
-                  NPM概述
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-10-16 15:47:00" itemprop="dateCreated datePublished" datetime="2018-10-16T15:47:00+08:00">2018-10-16</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-10-19 20:28:10" itemprop="dateModified" datetime="2018-10-19T20:28:10+08:00">2018-10-19</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/node-js/" itemprop="url" rel="index"><span itemprop="name">node.js</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          npm1 npm 的两层含义
-NPM 是一个 第三方模块的托管网站，指的就是https://www.npmjs.com/；
-NPM 是Node的包管理工具（全名叫做  Node package manager），在我们安装Node时候，就已经顺便也安装了 NPM 这个管理工具；
-
-2 安装和卸载全局
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/10/16/npm概述/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -895,11 +361,7 @@ NPM 是Node的包管理工具（全名叫做  Node package manager），在我�
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/23/vue动画/" itemprop="url">
-                  vue中的动画
-                </a>
+          <h1 class="post-title" itemprop="name headline">vue中的动画
               
             
           </h1>
@@ -974,190 +436,16 @@ NPM 是Node的包管理工具（全名叫做  Node package manager），在我�
           
 
           
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          Vue中的动画
-为什么要有动画：动画能够增加页面趣味性，目的是为了让用户更好的理解页面的功能；
-Vue中的动画，都是简单的过渡动画，并不会有 CSS3 那么炫酷；
-
-Vue中动画的基本介绍
-每个都动画分为两部分：
-入场动画：从不可见（flag = false） -&gt; 可见（flag = tru
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/08/23/vue动画/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lijie-1024.github.io/2018/08/20/vue品牌管理案例/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cat_李小黑">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小黑's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/20/vue品牌管理案例/" itemprop="url">
-                  vue品牌管理案例
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-08-20 20:55:42" itemprop="dateCreated datePublished" datetime="2018-08-20T20:55:42+08:00">2018-08-20</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-10-19 19:53:57" itemprop="dateModified" datetime="2018-10-19T19:53:57+08:00">2018-10-19</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/vue/" itemprop="url" rel="index"><span itemprop="name">vue</span></a></span>
-
-                
-                
-              
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
             </span>
           
 
           
-            
-          
-
-          
-          
-
-          
-
-          
 
           
 
@@ -1174,16 +462,55 @@ Vue中动画的基本介绍
       
 
       
-        
-          <h2 id="品牌管理案例"><a href="#品牌管理案例" class="headerlink" title="品牌管理案例"></a>品牌管理案例</h2>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/08/20/vue品牌管理案例/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <h2 id="Vue中的动画"><a href="#Vue中的动画" class="headerlink" title="Vue中的动画"></a><a href="https://cn.vuejs.org/v2/guide/transitions.html" target="_blank" rel="noopener">Vue中的动画</a></h2><ul>
+<li>为什么要有动画：动画能够增加页面趣味性，目的是为了让用户更好的理解页面的功能；</li>
+<li>Vue中的动画，都是简单的过渡动画，并不会有 CSS3 那么炫酷；</li>
+</ul>
+<h3 id="Vue中动画的基本介绍"><a href="#Vue中动画的基本介绍" class="headerlink" title="Vue中动画的基本介绍"></a>Vue中动画的基本介绍</h3><ol>
+<li>每个都动画分为两部分：<ul>
+<li>入场动画：从不可见（flag = false） -&gt; 可见（flag = true）</li>
+<li>出场动画：可见（flag = true） -&gt; 不可见（flag = false）</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li>入场时候，Vue把这个动画，分成了<strong>两个时间点</strong>和<strong>一个时间段</strong>：<ul>
+<li><code>v-enter</code>：入场之前</li>
+<li><code>v-enter-to</code>：入场完成以后</li>
+<li><code>v-enter-active</code>：入场的时间段</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li>离场时候，Vue把动画，分成了<strong>两个时间点</strong>和<strong>一个时间段</strong>：<ul>
+<li><code>v-leave</code>：离场之前</li>
+<li><code>v-leave-to</code>：离场完成以后</li>
+<li><code>v-leave-active</code>：离场的时间段</li>
+</ul>
+</li>
+</ol>
+<h3 id="使用过渡类名"><a href="#使用过渡类名" class="headerlink" title="使用过渡类名"></a>使用过渡类名</h3><ol>
+<li>把需要添加动画的元素，使用v-if或v-show进行控制</li>
+<li>把需要添加动画的元素，使用Vue提供的元素 <code>&lt;transition&gt;&lt;/transition&gt;</code> 包裹起来</li>
+<li>添加两组类：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.v-enter,</span><br><span class="line">.v-leave-to&#123;</span><br><span class="line">  opacity: 0;</span><br><span class="line">  transform: translateX(100px);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.v-enter-active,</span><br><span class="line">.v-leave-active&#123;</span><br><span class="line">  transition: all 0.5s ease;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="使用第三方-CSS-动画库"><a href="#使用第三方-CSS-动画库" class="headerlink" title="使用第三方 CSS 动画库"></a><a href="https://cn.vuejs.org/v2/guide/transitions.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E8%BF%87%E6%B8%A1%E7%9A%84%E7%B1%BB%E5%90%8D" target="_blank" rel="noopener">使用第三方 CSS 动画库</a></h3><ol>
+<li>把需要添加动画的元素，使用v-if或v-show进行控制</li>
+<li>把需要添加动画的元素，使用Vue提供的元素 <code>&lt;transition&gt;&lt;/transition&gt;</code> 包裹起来</li>
+<li>为  <code>&lt;transition&gt;&lt;/transition&gt;</code>  添加两个属性类<code>enter-active-class</code>, <code>leave-active-class</code></li>
+<li>把需要添加动画的元素，添加一个 <code>class=&quot;animated&quot;</code></li>
+</ol>
+<h3 id="使用动画钩子函数"><a href="#使用动画钩子函数" class="headerlink" title="使用动画钩子函数"></a>使用动画钩子函数</h3><ul>
+<li>注意：使用<code>过渡类名</code>或<code>第三方CSS动画库</code>实现的过渡动画，都是完整的动画，同时包含了 入场  和 出场 两种状态；</li>
+<li>如果想要实现<code>半场动画</code>,只能借助于 <code>动画钩子函数来实现</code>；</li>
+</ul>
+<h3 id="v-for-的列表过渡"><a href="#v-for-的列表过渡" class="headerlink" title="v-for 的列表过渡"></a><a href="https://cn.vuejs.org/v2/guide/transitions.html#%E5%88%97%E8%A1%A8%E8%BF%87%E6%B8%A1" target="_blank" rel="noopener">v-for 的列表过渡</a></h3><h3 id="列表的排序过渡"><a href="#列表的排序过渡" class="headerlink" title="列表的排序过渡"></a>列表的排序过渡</h3><p><code>&lt;transition-group&gt;</code> 组件还有一个特殊之处。不仅可以进入和离开动画，<strong>还可以改变定位</strong>。要使用这个新功能只需了解新增的 <code>v-move</code> 特性，<strong>它会在元素的改变定位的过程中应用</strong>。</p>
+<ul>
+<li><code>v-move</code> 和 <code>v-leave-active</code> 结合使用，能够让列表的过渡更加平缓柔和：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.v-move&#123;</span><br><span class="line">  transition: all 0.8s ease;</span><br><span class="line">&#125;</span><br><span class="line">/*控制要被删除的元素，脱离标准流*/</span><br><span class="line">.v-leave-active&#123;</span><br><span class="line">  position: absolute;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -1196,370 +523,90 @@ Vue中动画的基本介绍
     
 
     
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>请我吃个辣条吧~</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
 
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="cat_李小黑 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="cat_李小黑 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>cat_李小黑</li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://lijie-1024.github.io/2018/08/23/vue动画/" title="vue中的动画">http://lijie-1024.github.io/2018/08/23/vue动画/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！</li>
+</ul>
+
+      </div>
     
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lijie-1024.github.io/2018/08/19/vue生命周期/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cat_李小黑">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小黑's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/08/19/vue生命周期/" itemprop="url">
-                  vue生命周期
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-08-19 15:47:00" itemprop="dateCreated datePublished" datetime="2018-08-19T15:47:00+08:00">2018-08-19</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-10-19 19:53:45" itemprop="dateModified" datetime="2018-10-19T19:53:45+08:00">2018-10-19</time>
-              
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/vue/" itemprop="url" rel="index"><span itemprop="name">vue</span></a></span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/vue/" rel="tag"># vue</a>
           
-
+            <a href="/tags/前端/" rel="tag"># 前端</a>
           
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          <h2 id="vue实例的生命周期"><a href="#vue实例的生命周期" class="headerlink" title="vue实例的生命周期"></a>vue实例的生命周期</h2><p>概念：每一个Vue实例创建、运行、销毁的过程，就是生命周期；在实例的生命周期中，总是伴随着各种事件，这些事件就是生命周期函数；<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/08/19/vue生命周期/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/20/vue品牌管理案例/" rel="next" title="vue品牌管理案例">
+                <i class="fa fa-chevron-left"></i> vue品牌管理案例
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
 
-    
+          <span class="post-nav-divider"></span>
 
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lijie-1024.github.io/2018/07/18/BOM详解/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cat_李小黑">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小黑's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/18/BOM详解/" itemprop="url">
-                  BOM的概念
-                </a>
-              
+          <div class="post-nav-prev post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
+              <a href="/2018/10/16/npm概述/" rel="prev" title="NPM概述">
+                NPM概述 <i class="fa fa-chevron-right"></i>
+              </a>
             
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-07-18 10:47:00" itemprop="dateCreated datePublished" datetime="2018-07-18T10:47:00+08:00">2018-07-18</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-10-19 20:29:16" itemprop="dateModified" datetime="2018-10-19T20:29:16+08:00">2018-10-19</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/webAPI/" itemprop="url" rel="index"><span itemprop="name">webAPI</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-          BOMBOM的概念BOM(Browser Object Model) 是指浏览器对象模型，浏览器对象模型提供了独立于内容的、可以与浏览器窗口进行互动的对象结构。BOM由多个对象组成，其中代表浏览器窗口的Window对象是BOM的顶层对象，其他对象都是该对象的子对象。
-我们在浏览器中的一些操作都可以使
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/18/BOM详解/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -1569,189 +616,20 @@ Vue中动画的基本介绍
   </article>
 
 
-    
-      
+  </div>
 
-  
 
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lijie-1024.github.io/2018/07/03/vscode插件使用大全/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="cat_李小黑">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="小黑's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/03/vscode插件使用大全/" itemprop="url">
-                  vscode插件使用大全
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-07-03 12:07:19" itemprop="dateCreated datePublished" datetime="2018-07-03T12:07:19+08:00">2018-07-03</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2018-10-19 19:54:05" itemprop="dateModified" datetime="2018-10-19T19:54:05+08:00">2018-10-19</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/工具类/" itemprop="url" rel="index"><span itemprop="name">工具类</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h2 id="vscode"><a href="#vscode" class="headerlink" title="vscode"></a>vscode</h2><p>VS Code（Visual Studio Code）是由微软研发的一款免费、开源的跨平台文本（代码）编辑器。前端开发几乎完美的编辑器。</p>
-<p>推荐我所使用的插件</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/03/vscode插件使用大全/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
           </div>
-          <!--/noindex-->
-        
-      
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC80MDM5NC8xNjkyMQ"></div>
     </div>
 
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
   
 
 
-          </div>
-          
 
         </div>
         
@@ -1772,8 +650,17 @@ Vue中动画的基本介绍
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1913,6 +800,22 @@ Vue中动画的基本介绍
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue中的动画"><span class="nav-number">1.</span> <span class="nav-text">Vue中的动画</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue中动画的基本介绍"><span class="nav-number">1.1.</span> <span class="nav-text">Vue中动画的基本介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用过渡类名"><span class="nav-number">1.2.</span> <span class="nav-text">使用过渡类名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用第三方-CSS-动画库"><span class="nav-number">1.3.</span> <span class="nav-text">使用第三方 CSS 动画库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用动画钩子函数"><span class="nav-number">1.4.</span> <span class="nav-text">使用动画钩子函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#v-for-的列表过渡"><span class="nav-number">1.5.</span> <span class="nav-text">v-for 的列表过渡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列表的排序过渡"><span class="nav-number">1.6.</span> <span class="nav-text">列表的排序过渡</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -2073,6 +976,10 @@ Vue中动画的基本介绍
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.2"></script>
+
+
 
   
 
@@ -2085,6 +992,20 @@ Vue中动画的基本介绍
 
 
 
+  
+    <script type="text/javascript">
+      window.livereOptions = {
+        refer: '2018/08/23/vue动画/'
+      };
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 

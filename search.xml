@@ -40,6 +40,18 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[vue中的动画]]></title>
+    <url>%2F2018%2F08%2F23%2Fvue%E5%8A%A8%E7%94%BB%2F</url>
+    <content type="text"><![CDATA[Vue中的动画 为什么要有动画：动画能够增加页面趣味性，目的是为了让用户更好的理解页面的功能； Vue中的动画，都是简单的过渡动画，并不会有 CSS3 那么炫酷； Vue中动画的基本介绍 每个都动画分为两部分： 入场动画：从不可见（flag = false） -&gt; 可见（flag = true） 出场动画：可见（flag = true） -&gt; 不可见（flag = false） 入场时候，Vue把这个动画，分成了两个时间点和一个时间段： v-enter：入场之前 v-enter-to：入场完成以后 v-enter-active：入场的时间段 离场时候，Vue把动画，分成了两个时间点和一个时间段： v-leave：离场之前 v-leave-to：离场完成以后 v-leave-active：离场的时间段 使用过渡类名 把需要添加动画的元素，使用v-if或v-show进行控制 把需要添加动画的元素，使用Vue提供的元素 &lt;transition&gt;&lt;/transition&gt; 包裹起来 添加两组类： 12345678910.v-enter,.v-leave-to&#123; opacity: 0; transform: translateX(100px);&#125;.v-enter-active,.v-leave-active&#123; transition: all 0.5s ease;&#125; 使用第三方 CSS 动画库 把需要添加动画的元素，使用v-if或v-show进行控制 把需要添加动画的元素，使用Vue提供的元素 &lt;transition&gt;&lt;/transition&gt; 包裹起来 为 &lt;transition&gt;&lt;/transition&gt; 添加两个属性类enter-active-class, leave-active-class 把需要添加动画的元素，添加一个 class=&quot;animated&quot; 使用动画钩子函数 注意：使用过渡类名或第三方CSS动画库实现的过渡动画，都是完整的动画，同时包含了 入场 和 出场 两种状态； 如果想要实现半场动画,只能借助于 动画钩子函数来实现； v-for 的列表过渡列表的排序过渡&lt;transition-group&gt; 组件还有一个特殊之处。不仅可以进入和离开动画，还可以改变定位。要使用这个新功能只需了解新增的 v-move 特性，它会在元素的改变定位的过程中应用。 v-move 和 v-leave-active 结合使用，能够让列表的过渡更加平缓柔和： 1234567.v-move&#123; transition: all 0.8s ease;&#125;/*控制要被删除的元素，脱离标准流*/.v-leave-active&#123; position: absolute;&#125;]]></content>
+      <categories>
+        <category>vue</category>
+      </categories>
+      <tags>
+        <tag>vue</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[vue品牌管理案例]]></title>
     <url>%2F2018%2F08%2F20%2Fvue%E5%93%81%E7%89%8C%E7%AE%A1%E7%90%86%E6%A1%88%E4%BE%8B%2F</url>
     <content type="text"><![CDATA[品牌管理案例 添加新品牌删除品牌根据条件筛选品牌 1.x 版本中的 filterBy 指令，在 2.x 中已经被废除：filterBy - 指令 12345678&lt;tr v-for="item in list | filterBy searchName in 'name'"&gt; &lt;td&gt;&#123;&#123;item.id&#125;&#125;&lt;/td&gt; &lt;td&gt;&#123;&#123;item.name&#125;&#125;&lt;/td&gt; &lt;td&gt;&#123;&#123;item.ctime&#125;&#125;&lt;/td&gt; &lt;td&gt; &lt;a href="#" @click.prevent="del(item.id)"&gt;删除&lt;/a&gt; &lt;/td&gt;&lt;/tr&gt; 在 2.x 版本中手动实现筛选的方式： 筛选框绑定到 VM 实例中的 searchName 属性： 12&lt;hr&gt; 输入筛选名称：&lt;input type="text" v-model="searchName"&gt; 在使用 v-for 指令循环每一行数据的时候，不再直接 item in list，而是 in 一个 过滤的 methods 方法，同时，把过滤条件searchName传递进去： 12345678910&lt;tbody&gt; &lt;tr v-for="item in search(searchName)"&gt; &lt;td&gt;&#123;&#123;item.id&#125;&#125;&lt;/td&gt; &lt;td&gt;&#123;&#123;item.name&#125;&#125;&lt;/td&gt; &lt;td&gt;&#123;&#123;item.ctime&#125;&#125;&lt;/td&gt; &lt;td&gt; &lt;a href="#" @click.prevent="del(item.id)"&gt;删除&lt;/a&gt; &lt;/td&gt; &lt;/tr&gt; &lt;/tbody&gt; search 过滤方法中，使用 数组的 filter 方法进行过滤： 12345search(name) &#123; return this.list.filter(x =&gt; &#123; return x.name.indexOf(name) != -1; &#125;);&#125;]]></content>
@@ -47,8 +59,8 @@
         <category>vue</category>
       </categories>
       <tags>
-        <tag>前端</tag>
         <tag>vue</tag>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -59,8 +71,8 @@
         <category>vue</category>
       </categories>
       <tags>
-        <tag>前端</tag>
         <tag>vue</tag>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
