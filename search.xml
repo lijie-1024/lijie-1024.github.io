@@ -40,6 +40,18 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[如何使用hexo搭建GitHub.io网站]]></title>
+    <url>%2F2018%2F09%2F03%2F%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BAGitHub.io%E7%BD%91%E7%AB%99%2F</url>
+    <content type="text"><![CDATA[前言这一篇主要介绍如何使用hexo搭建GitHub.io网站我自己的网站：https://lijie-1024.github.io使用hexo+next主题+GitHub搭建，具体问题可以留言问我。本篇所包含的内容如下： 正文一、申请github.io网站github注册我就不讲了。。。能想到这个法子创建博客的应该也有账号了。直接创建开始： 创建一个新的资源库，名称为yourname.github.io, 其中yourname是你的github名称，如下： 二、 配置工具 安装Git Bash–百度搜索git bash安装包 自行安装 —可以忽略此步 官方网站：https://git-scm.com/downloads 一路next安装，按window+r 在新打开的窗口中输入cmd，敲击回车，打开命令行界面。输入下面代码，出现版本号就算是安装成功了。1git --version 安装NodeJs--百度搜索node.js安装包 下载Node.js安装文件：Windows Installer 32-bitWindows Installer 64-bit 根据自己的Windows版本选择相应的安装文件，要是不知道，就安装32-bit。 一直next到安装完，按window+r 在新打开的窗口中输入cmd，敲击回车，打开命令行界面。输入下面代码，出现版本号就算是安装成功了。12node -vnpm -v 安装hexo 先创建一个文件夹（用来存放所有blog的东西），然后cd到该文件夹下。 文件夹内右键加shift打开命令行窗口，或者路径cmd打开运行： npm i -g hexo 等待自动下载hexokinase包 初始化命令运行：hexo init 完成之后可以看到文件node_modules：是依赖包public：存放的是生成的页面scaffolds：命令生成文章等的模板source：用命令创建的各种文章themes：主题_config.yml：整个博客的配置db.json：source解析所得到的package.json：项目所需模块项目的配置信息 然后输入：npm install —–之后npm将会自动安装你需要的组件，只需要等待npm操作即可。 完成以上操作就配置好了基础 。 三、 部署项目 使用编辑器打开你的文件—_config.yml：文件，在最后加入下面三行代码。 更改路程为自己的名称https://github.com/‘你github的名称’/‘你github的名称’.github.io.git 1234deploy: type: git repo: https://github.com/YourgithubName/YourgithubName.github.io.git branch: master cmd到根目录打开窗命令行依次输入 123hexo cleanhexo generatehexo server 作用hexo clean –整理 ；hexo generate –生成htnl页面；hexo server–在端口4000中打开（可以简写为hexo s） 打开浏览器输入：http://localhost:4000 到这里就可以本地看到自己的网站啦~~ 四、上传到github cmd命令行安装npm包：npm install hexo-deployer-git –save cmd执行命令(建议每次都按照如下步骤部署)：123hexo cleanhexo generatehexo deploy 注意deploy的过程中要输入你的username及passward。如下： 在浏览器中输入http://yourgithubname.github.io就可以看到你的个人博客啦~~~例如我的：https://lijie-1024.github.io 五、绑定个人域名—可以忽略 购买域名：我自己的是在腾讯云买的，http://hm1024.club 添加CNAME：在项目的source文件夹下新建一个名为CNAME的文件，在里面添加你购买的域名，只能添加一个 到DNS中解析记录： 其中ip地址为你的github的地址 可在cmd命令行中输入：ping yourname.github.io 再次部署一次，就可以在域名中打开了 hexo clean hexo g （简写） hexo d （简写） 在浏览器中输入http://yourgithubname.github.io就可以看到你的个人博客啦！！完美~ 小结 基本上这几个操作按顺序下来就可以完美创建你的博客了！ 下一篇讲：修改hexo主题和一些功能的添加。 结束，有问题可以留言]]></content>
+      <categories>
+        <category>博客</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[vue中的动画]]></title>
     <url>%2F2018%2F08%2F23%2Fvue%E5%8A%A8%E7%94%BB%2F</url>
     <content type="text"><![CDATA[Vue中的动画 为什么要有动画：动画能够增加页面趣味性，目的是为了让用户更好的理解页面的功能； Vue中的动画，都是简单的过渡动画，并不会有 CSS3 那么炫酷； Vue中动画的基本介绍 每个都动画分为两部分： 入场动画：从不可见（flag = false） -&gt; 可见（flag = true） 出场动画：可见（flag = true） -&gt; 不可见（flag = false） 入场时候，Vue把这个动画，分成了两个时间点和一个时间段： v-enter：入场之前 v-enter-to：入场完成以后 v-enter-active：入场的时间段 离场时候，Vue把动画，分成了两个时间点和一个时间段： v-leave：离场之前 v-leave-to：离场完成以后 v-leave-active：离场的时间段 使用过渡类名 把需要添加动画的元素，使用v-if或v-show进行控制 把需要添加动画的元素，使用Vue提供的元素 &lt;transition&gt;&lt;/transition&gt; 包裹起来 添加两组类： 12345678910.v-enter,.v-leave-to&#123; opacity: 0; transform: translateX(100px);&#125;.v-enter-active,.v-leave-active&#123; transition: all 0.5s ease;&#125; 使用第三方 CSS 动画库 把需要添加动画的元素，使用v-if或v-show进行控制 把需要添加动画的元素，使用Vue提供的元素 &lt;transition&gt;&lt;/transition&gt; 包裹起来 为 &lt;transition&gt;&lt;/transition&gt; 添加两个属性类enter-active-class, leave-active-class 把需要添加动画的元素，添加一个 class=&quot;animated&quot; 使用动画钩子函数 注意：使用过渡类名或第三方CSS动画库实现的过渡动画，都是完整的动画，同时包含了 入场 和 出场 两种状态； 如果想要实现半场动画,只能借助于 动画钩子函数来实现； v-for 的列表过渡列表的排序过渡&lt;transition-group&gt; 组件还有一个特殊之处。不仅可以进入和离开动画，还可以改变定位。要使用这个新功能只需了解新增的 v-move 特性，它会在元素的改变定位的过程中应用。 v-move 和 v-leave-active 结合使用，能够让列表的过渡更加平缓柔和： 1234567.v-move&#123; transition: all 0.8s ease;&#125;/*控制要被删除的元素，脱离标准流*/.v-leave-active&#123; position: absolute;&#125;]]></content>
@@ -47,8 +59,8 @@
         <category>vue</category>
       </categories>
       <tags>
-        <tag>vue</tag>
         <tag>前端</tag>
+        <tag>vue</tag>
       </tags>
   </entry>
   <entry>
@@ -59,8 +71,8 @@
         <category>vue</category>
       </categories>
       <tags>
-        <tag>vue</tag>
         <tag>前端</tag>
+        <tag>vue</tag>
       </tags>
   </entry>
   <entry>
@@ -71,8 +83,8 @@
         <category>vue</category>
       </categories>
       <tags>
-        <tag>vue</tag>
         <tag>前端</tag>
+        <tag>vue</tag>
       </tags>
   </entry>
   <entry>
