@@ -124,7 +124,7 @@
 <meta property="og:site_name" content="小黑&#39;s Blog">
 <meta property="og:description" content="Node.js中模块和包的概念Node.js 由三部分组成：ECMAScript 核心 + 全局成员 + 模块成员模块成员，根据一些区别，又可以分为三大类： 核心模块、第三方模块、用户自定义模块">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-10-19T11:57:51.278Z">
+<meta property="og:updated_time" content="2018-10-22T02:37:45.298Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node.js中模块和包的概念">
 <meta name="twitter:description" content="Node.js中模块和包的概念Node.js 由三部分组成：ECMAScript 核心 + 全局成员 + 模块成员模块成员，根据一些区别，又可以分为三大类： 核心模块、第三方模块、用户自定义模块">
@@ -403,7 +403,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-10-19 19:57:51" itemprop="dateModified" datetime="2018-10-19T19:57:51+08:00">2018-10-19</time>
+                <time title="修改时间：2018-10-22 10:37:45" itemprop="dateModified" datetime="2018-10-22T10:37:45+08:00">2018-10-22</time>
               
             
           </span>
@@ -512,8 +512,18 @@
 <li>文档应该在<strong>doc 目录</strong>下;<br>单元测试应该在<strong>test 目录</strong>下;</li>
 <li>Node.js 对包要求并没有那么严格，只要顶层目录下有<code>package.json</code>，并<strong>符合基本规范</strong>即可;</li>
 </ol>
-<h4 id="2-3-包描述文件-package-json【了解】"><a href="#2-3-包描述文件-package-json【了解】" class="headerlink" title="2.3 包描述文件 package.json【了解】"></a>2.3 包描述文件 package.json【了解】</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">name：包的名称，必须是唯一</span><br><span class="line">description：包的简要说明</span><br><span class="line">version：符合语义化版本识别规范的版本字符串</span><br><span class="line">keywords：关键字数据，通常用于搜索</span><br><span class="line">maintainers：维护者数组，每个元素要包含name、email、web可选字段</span><br><span class="line">contributors：贡献者数组，格式与maintainers相同。包的坐着应该是贡献者数据的第一个元素</span><br><span class="line">bugs：提交bug的地址，可以是网址或者电子邮件地址</span><br><span class="line">licenses：许可证数组，每个元素要包含type和url字段</span><br><span class="line">repositories：仓库托管地址数组，每个元素要包含type、url和path字段</span><br><span class="line">dependencies：包的依赖，一个关联数组，由包名称和版本号组成。</span><br><span class="line">devDependencies：开发依赖项，表示一个包在开发期间用到的依赖项</span><br></pre></td></tr></table></figure>
-<h2 id="模块作用域-和-全局作用域"><a href="#模块作用域-和-全局作用域" class="headerlink" title="模块作用域 和 全局作用域"></a>模块作用域 和 全局作用域</h2><blockquote>
+<h4 id="2-3-包描述文件-package-json【了解】"><a href="#2-3-包描述文件-package-json【了解】" class="headerlink" title="2.3 包描述文件 package.json【了解】"></a>2.3 包描述文件 package.json【了解】</h4><pre><code>name：包的名称，必须是唯一
+description：包的简要说明
+version：符合语义化版本识别规范的版本字符串
+keywords：关键字数据，通常用于搜索
+maintainers：维护者数组，每个元素要包含name、email、web可选字段
+contributors：贡献者数组，格式与maintainers相同。包的坐着应该是贡献者数据的第一个元素
+bugs：提交bug的地址，可以是网址或者电子邮件地址
+licenses：许可证数组，每个元素要包含type和url字段
+repositories：仓库托管地址数组，每个元素要包含type、url和path字段
+dependencies：包的依赖，一个关联数组，由包名称和版本号组成。
+devDependencies：开发依赖项，表示一个包在开发期间用到的依赖项
+</code></pre><h2 id="模块作用域-和-全局作用域"><a href="#模块作用域-和-全局作用域" class="headerlink" title="模块作用域 和 全局作用域"></a>模块作用域 和 全局作用域</h2><blockquote>
 <p>在Node.js中有两个作用域，分别是 全局作用域 和 模块作用域；</p>
 </blockquote>
 <ol>
@@ -711,7 +721,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -734,7 +744,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">5</span>
+                      
+                    
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -773,7 +785,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                      
+                    
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

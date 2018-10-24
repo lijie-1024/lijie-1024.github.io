@@ -474,23 +474,57 @@
 <h3 id="页面加载事件"><a href="#页面加载事件" class="headerlink" title="页面加载事件"></a>页面加载事件</h3><ul>
 <li>onload</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 当页面加载完成执行</span></span><br><span class="line">  <span class="comment">// 当页面完全加载所有内容（包括图像、脚本文件、CSS 文件等）执行</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript"><code class="language-javascript">window<span class="token punctuation">.</span>onload <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// 当页面加载完成执行</span>
+  <span class="token comment" spellcheck="true">// 当页面完全加载所有内容（包括图像、脚本文件、CSS 文件等）执行</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>onunload</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.onunload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 当用户退出页面时执行</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript"><code class="language-javascript">window<span class="token punctuation">.</span>onunload <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// 当用户退出页面时执行</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <h3 id="定时器"><a href="#定时器" class="headerlink" title="定时器"></a>定时器</h3><h4 id="setTimeout-和clearTimeout"><a href="#setTimeout-和clearTimeout" class="headerlink" title="setTimeout()和clearTimeout()"></a>setTimeout()和clearTimeout()</h4><p>在指定的毫秒数到达之后执行指定的函数，只执行一次</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建一个定时器，1000毫秒后执行，返回定时器的标示</span></span><br><span class="line"><span class="keyword">var</span> timerId = setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'Hello World'</span>);</span><br><span class="line">&#125;, <span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 取消定时器的执行</span></span><br><span class="line">clearTimeout(timerId);</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// 创建一个定时器，1000毫秒后执行，返回定时器的标示</span>
+<span class="token keyword">var</span> timerId <span class="token operator">=</span> <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Hello World'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 取消定时器的执行</span>
+<span class="token function">clearTimeout</span><span class="token punctuation">(</span>timerId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h4 id="setInterval-和clearInterval"><a href="#setInterval-和clearInterval" class="headerlink" title="setInterval()和clearInterval()"></a>setInterval()和clearInterval()</h4><p>定时调用的函数，可以按照给定的时间(单位毫秒)周期调用函数</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建一个定时器，每隔1秒调用一次</span></span><br><span class="line"><span class="keyword">var</span> timerId = setInterval(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> date = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">  <span class="built_in">console</span>.log(date.toLocaleTimeString());</span><br><span class="line">&#125;, <span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 取消定时器的执行</span></span><br><span class="line">clearInterval(timerId);</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">// 创建一个定时器，每隔1秒调用一次</span>
+<span class="token keyword">var</span> timerId <span class="token operator">=</span> <span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> date <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>date<span class="token punctuation">.</span><span class="token function">toLocaleTimeString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">// 取消定时器的执行</span>
+<span class="token function">clearInterval</span><span class="token punctuation">(</span>timerId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="location对象"><a href="#location对象" class="headerlink" title="location对象"></a>location对象</h3><p>location对象是window对象下的一个属性，时候的时候可以省略window对象</p>
 <p>location可以获取或者设置浏览器地址栏的URL</p>
 <h4 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h4><p>统一资源定位符 (Uniform Resource Locator, URL)</p>
 <ul>
 <li>URL的组成</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">scheme://host:port/path?query#fragment</span><br><span class="line">scheme:通信协议</span><br><span class="line">	常用的http,ftp,maito等</span><br><span class="line">host:主机</span><br><span class="line">	服务器(计算机)域名系统 (DNS) 主机名或 IP 地址。</span><br><span class="line">port:端口号</span><br><span class="line">	整数，可选，省略时使用方案的默认端口，如http的默认端口为80。</span><br><span class="line">path:路径</span><br><span class="line">	由零或多个&apos;/&apos;符号隔开的字符串，一般用来表示主机上的一个目录或文件地址。</span><br><span class="line">query:查询</span><br><span class="line">	可选，用于给动态网页传递参数，可有多个参数，用&apos;&amp;&apos;符号隔开，每个参数的名和值用&apos;=&apos;符号隔开。例如：name=zs</span><br><span class="line">fragment:信息片断</span><br><span class="line">	字符串，锚点.</span><br></pre></td></tr></table></figure>
-<h4 id="location有哪些成员？"><a href="#location有哪些成员？" class="headerlink" title="location有哪些成员？"></a>location有哪些成员？</h4><ul>
+<pre><code>scheme://host:port/path?query#fragment
+scheme:通信协议
+    常用的http,ftp,maito等
+host:主机
+    服务器(计算机)域名系统 (DNS) 主机名或 IP 地址。
+port:端口号
+    整数，可选，省略时使用方案的默认端口，如http的默认端口为80。
+path:路径
+    由零或多个&#39;/&#39;符号隔开的字符串，一般用来表示主机上的一个目录或文件地址。
+query:查询
+    可选，用于给动态网页传递参数，可有多个参数，用&#39;&amp;&#39;符号隔开，每个参数的名和值用&#39;=&#39;符号隔开。例如：name=zs
+fragment:信息片断
+    字符串，锚点.
+</code></pre><h4 id="location有哪些成员？"><a href="#location有哪些成员？" class="headerlink" title="location有哪些成员？"></a>location有哪些成员？</h4><ul>
 <li><p>使用chrome的控制台查看</p>
 </li>
 <li><p>查MDN</p>
@@ -504,7 +538,24 @@
 </li>
 </ul>
 <h4 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h4><p>解析URL中的query，并返回对象的形式</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getQuery</span>(<span class="params">queryStr</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> query = &#123;&#125;;</span><br><span class="line">  <span class="keyword">if</span> (queryStr.indexOf(<span class="string">'?'</span>) &gt; <span class="number">-1</span>) &#123;</span><br><span class="line">    <span class="keyword">var</span> index = queryStr.indexOf(<span class="string">'?'</span>);</span><br><span class="line">    queryStr = queryStr.substr(index + <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">var</span> array = queryStr.split(<span class="string">'&amp;'</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; array.length; i++) &#123;</span><br><span class="line">      <span class="keyword">var</span> tmpArr = array[i].split(<span class="string">'='</span>);</span><br><span class="line">      <span class="keyword">if</span> (tmpArr.length === <span class="number">2</span>) &#123;</span><br><span class="line">        query[tmpArr[<span class="number">0</span>]] = tmpArr[<span class="number">1</span>];</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> query;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(getQuery(location.search));</span><br><span class="line"><span class="built_in">console</span>.log(getQuery(location.href));</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">getQuery</span><span class="token punctuation">(</span>queryStr<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> query <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>queryStr<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">'?'</span><span class="token punctuation">)</span> <span class="token operator">></span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> index <span class="token operator">=</span> queryStr<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span><span class="token string">'?'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    queryStr <span class="token operator">=</span> queryStr<span class="token punctuation">.</span><span class="token function">substr</span><span class="token punctuation">(</span>index <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> array <span class="token operator">=</span> queryStr<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'&amp;'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> array<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">var</span> tmpArr <span class="token operator">=</span> array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'='</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>tmpArr<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        query<span class="token punctuation">[</span>tmpArr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> tmpArr<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> query<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">getQuery</span><span class="token punctuation">(</span>location<span class="token punctuation">.</span>search<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">getQuery</span><span class="token punctuation">(</span>location<span class="token punctuation">.</span>href<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="history对象"><a href="#history对象" class="headerlink" title="history对象"></a>history对象</h3><ul>
 <li>back()</li>
 <li>forward()</li>
@@ -522,9 +573,25 @@
 <li>offsetParent用于获取定位的父级元素</li>
 <li>offsetParent和parentNode的区别</li>
 </ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> box = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(box.offsetParent);</span><br><span class="line"><span class="built_in">console</span>.log(box.offsetLeft);</span><br><span class="line"><span class="built_in">console</span>.log(box.offsetTop);</span><br><span class="line"><span class="built_in">console</span>.log(box.offsetWidth);</span><br><span class="line"><span class="built_in">console</span>.log(box.offsetHeight);</span><br></pre></td></tr></table></figure>
-<h3 id="客户区大小"><a href="#客户区大小" class="headerlink" title="客户区大小"></a>客户区大小</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> box = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(box.clientLeft);</span><br><span class="line"><span class="built_in">console</span>.log(box.clientTop);</span><br><span class="line"><span class="built_in">console</span>.log(box.clientWidth);</span><br><span class="line"><span class="built_in">console</span>.log(box.clientHeight);</span><br></pre></td></tr></table></figure>
-<h3 id="滚动偏移"><a href="#滚动偏移" class="headerlink" title="滚动偏移"></a>滚动偏移</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> box = <span class="built_in">document</span>.getElementById(<span class="string">'box'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(box.scrollLeft)</span><br><span class="line"><span class="built_in">console</span>.log(box.scrollTop)</span><br><span class="line"><span class="built_in">console</span>.log(box.scrollWidth)</span><br><span class="line"><span class="built_in">console</span>.log(box.scrollHeight)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">var</span> box <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'box'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>box<span class="token punctuation">.</span>offsetParent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>box<span class="token punctuation">.</span>offsetLeft<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>box<span class="token punctuation">.</span>offsetTop<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>box<span class="token punctuation">.</span>offsetWidth<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>box<span class="token punctuation">.</span>offsetHeight<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="客户区大小"><a href="#客户区大小" class="headerlink" title="客户区大小"></a>客户区大小</h3><pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">var</span> box <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'box'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>box<span class="token punctuation">.</span>clientLeft<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>box<span class="token punctuation">.</span>clientTop<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>box<span class="token punctuation">.</span>clientWidth<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>box<span class="token punctuation">.</span>clientHeight<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="滚动偏移"><a href="#滚动偏移" class="headerlink" title="滚动偏移"></a>滚动偏移</h3><pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token keyword">var</span> box <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'box'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>box<span class="token punctuation">.</span>scrollLeft<span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>box<span class="token punctuation">.</span>scrollTop<span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>box<span class="token punctuation">.</span>scrollWidth<span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>box<span class="token punctuation">.</span>scrollHeight<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
       
     </div>
@@ -605,8 +672,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/03/vscode插件使用大全/" rel="next" title="vscode插件使用大全">
-                <i class="fa fa-chevron-left"></i> vscode插件使用大全
+              <a href="/2018/07/03/webpack/" rel="next" title="webpack">
+                <i class="fa fa-chevron-left"></i> webpack
               </a>
             
           </div>
@@ -696,7 +763,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -719,7 +786,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">5</span>
+                      
+                    
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -758,7 +827,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                      
+                    
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

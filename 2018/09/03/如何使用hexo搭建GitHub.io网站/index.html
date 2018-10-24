@@ -475,8 +475,8 @@
 <li><p><strong>安装Git Bash</strong>–百度搜索git bash安装包 自行安装   —<strong>可以忽略此步</strong></p>
 <ol>
 <li>官方网站：<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">https://git-scm.com/downloads</a><ol start="2">
-<li>一路next安装，按window+r  在新打开的窗口中输入cmd，敲击回车，打开命令行界面。输入下面代码，出现版本号就算是安装成功了。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure>
-</li>
+<li>一路next安装，按window+r  在新打开的窗口中输入cmd，敲击回车，打开命令行界面。输入下面代码，出现版本号就算是安装成功了。<pre><code>git --version
+</code></pre></li>
 </ol>
 </li>
 </ol>
@@ -485,8 +485,9 @@
 <ol>
 <li>下载Node.js安装文件：<br>Windows Installer 32-bit<br>Windows Installer 64-bit<ol start="2">
 <li>根据自己的Windows版本选择相应的安装文件，要是不知道，就安装32-bit。</li>
-<li>一直next到安装完，按window+r  在新打开的窗口中输入cmd，敲击回车，打开命令行界面。输入下面代码，出现版本号就算是安装成功了。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
-</li>
+<li>一直next到安装完，按window+r  在新打开的窗口中输入cmd，敲击回车，打开命令行界面。输入下面代码，出现版本号就算是安装成功了。<pre><code>node -v
+npm -v
+</code></pre></li>
 </ol>
 </li>
 </ol>
@@ -505,12 +506,15 @@
 <p><strong>完成以上操作就配置好了基础  。</strong></p>
 <h3 id="三、-部署项目"><a href="#三、-部署项目" class="headerlink" title="三、 部署项目"></a>三、 部署项目</h3><ul>
 <li>使用编辑器打开你的文件—_config.yml：文件，在最后加入下面三行代码。</li>
-<li><p>更改路程为自己的名称<a href="https://github.com/‘你github的名称’/‘你github的名称’.github.io.git" target="_blank" rel="noopener">https://github.com/‘你github的名称’/‘你github的名称’.github.io.git</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/YourgithubName/YourgithubName.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>cmd到根目录打开窗命令行依次输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-<ul>
+<li>更改路程为自己的名称<a href="https://github.com/‘你github的名称’/‘你github的名称’.github.io.git" target="_blank" rel="noopener">https://github.com/‘你github的名称’/‘你github的名称’.github.io.git</a><pre><code>deploy:
+type: git
+repo: https://github.com/YourgithubName/YourgithubName.github.io.git
+branch: master
+</code></pre></li>
+<li>cmd到根目录打开窗命令行依次输入<pre><code>hexo clean
+hexo generate
+hexo server
+</code></pre><ul>
 <li>作用<br>hexo clean –整理 ；hexo generate –生成htnl页面；hexo server–在端口4000中打开（可以简写为hexo s）</li>
 </ul>
 </li>
@@ -519,10 +523,11 @@
 <p><strong>到这里就可以本地看到自己的网站啦~~</strong></p>
 <h3 id="四、上传到github"><a href="#四、上传到github" class="headerlink" title="四、上传到github"></a>四、上传到github</h3><ul>
 <li>cmd命令行安装npm包：npm install hexo-deployer-git –save</li>
-<li>cmd执行命令(建议每次都按照如下步骤部署)：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-</li>
+<li>cmd执行命令(建议每次都按照如下步骤部署)：<pre><code>hexo clean
+hexo generate
+hexo deploy
+</code></pre>注意deploy的过程中要输入你的username及passward。如下：<br><img src="https://img-blog.csdn.net/20181021102431650?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIxNjEwNQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="在这里插入图片描述"></li>
 </ul>
-<p>注意deploy的过程中要输入你的username及passward。如下：<br><img src="https://img-blog.csdn.net/20181021102431650?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIxNjEwNQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="在这里插入图片描述"></p>
 <p><strong>在浏览器中输入<a href="http://yourgithubname.github.io就可以看到你的个人博客啦~~" target="_blank" rel="noopener">http://yourgithubname.github.io就可以看到你的个人博客啦~~</a>~</strong><br><strong>例如我的：<a href="https://lijie-1024.github.io">https://lijie-1024.github.io</a></strong></p>
 <h3 id="五、绑定个人域名—可以忽略"><a href="#五、绑定个人域名—可以忽略" class="headerlink" title="五、绑定个人域名—可以忽略"></a>五、绑定个人域名—可以忽略</h3><ul>
 <li>购买域名：我自己的是在腾讯云买的，<a href="http://hm1024.club" target="_blank" rel="noopener">http://hm1024.club</a> </li>
@@ -716,7 +721,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -739,7 +744,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">5</span>
+                      
+                    
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -778,7 +785,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                      
+                    
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

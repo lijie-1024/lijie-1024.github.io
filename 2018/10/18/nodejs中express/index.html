@@ -117,7 +117,7 @@
 
 
   <meta name="description" content="node.js中的express框架 掌握nodemon工具的使用 掌握express框架的基本用法 了解express框架提供的中间件的概念 能够连接并操作数据库 了解模块加载机制  1. 使用 nodemon 工具来自动重启web服务器 nodemon的作用：能够实时监听当前项目中，文件的变化；只要监听到了文件的变化，则 nodemon 工具，会自动重新启动 web 服务器，从而使最新的代码生">
-<meta name="keywords" content="node.js,express,npm">
+<meta name="keywords" content="node.js,npm,express">
 <meta property="og:type" content="article">
 <meta property="og:title" content="node.js中的express框架">
 <meta property="og:url" content="http://lijie-1024.github.io/2018/10/18/nodejs中express/index.html">
@@ -546,11 +546,26 @@
 <li>在Express中，<strong>路由的主要职责</strong> 就是 <strong>把请求分发到对应的处理函数中</strong>；</li>
 <li>在Express中，如何 定义并使用路由呢？</li>
 </ol>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. 封装单独的 router.js 路由模块文件</span></span><br><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>)</span><br><span class="line"><span class="comment">// 创建路由对象</span></span><br><span class="line"><span class="keyword">const</span> router = express.Router()</span><br><span class="line"></span><br><span class="line">router.get(<span class="string">'/'</span>, (req, res)=&gt;&#123;&#125;)</span><br><span class="line">router.get(<span class="string">'/movie'</span>, (req, res)=&gt;&#123;&#125;)</span><br><span class="line">router.get(<span class="string">'/about'</span>, (req, res)=&gt;&#123;&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 导出路由对象</span></span><br><span class="line"><span class="built_in">module</span>.exports = router</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-js"><code class="language-js">  <span class="token comment" spellcheck="true">// 1. 封装单独的 router.js 路由模块文件</span>
+  <span class="token keyword">const</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span>
+  <span class="token comment" spellcheck="true">// 创建路由对象</span>
+  <span class="token keyword">const</span> router <span class="token operator">=</span> express<span class="token punctuation">.</span><span class="token function">Router</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+  router<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'/'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>req<span class="token punctuation">,</span> res<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+  router<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'/movie'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>req<span class="token punctuation">,</span> res<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+  router<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">'/about'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>req<span class="token punctuation">,</span> res<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+  <span class="token comment" spellcheck="true">// 导出路由对象</span>
+  module<span class="token punctuation">.</span>exports <span class="token operator">=</span> router
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ol>
 <li>express 创建的 app 服务器，如何使用 路由模块呢？</li>
 </ol>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 导入自己的路由模块</span></span><br><span class="line"><span class="keyword">const</span> router = <span class="built_in">require</span>(<span class="string">'./router.js'</span>)</span><br><span class="line"><span class="comment">// 使用 app.use() 来注册路由</span></span><br><span class="line">app.use(router)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-js"><code class="language-js">  <span class="token comment" spellcheck="true">// 导入自己的路由模块</span>
+  <span class="token keyword">const</span> router <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'./router.js'</span><span class="token punctuation">)</span>
+  <span class="token comment" spellcheck="true">// 使用 app.use() 来注册路由</span>
+  app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>router<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="4-Express-框架里-中间件的概念"><a href="#4-Express-框架里-中间件的概念" class="headerlink" title="4. Express 框架里 中间件的概念"></a>4. Express 框架里 中间件的概念</h2><h3 id="4-1-什么是中间件"><a href="#4-1-什么是中间件" class="headerlink" title="4.1 什么是中间件"></a>4.1 什么是中间件</h3><blockquote>
 <p>定义：中间件就是一个处理函数；只不过这个函数比较特殊，包含了三个参数，分别是 <code>req</code>，<code>res</code>，<code>next</code></p>
 <p>注意：中间件方法中的三个参数：</p>
@@ -583,8 +598,12 @@
 <li><p>如果缓存中没有则尝试加载用户模块；</p>
 </li>
 <li><p>如果在加载用户模块时候省略了后缀名，则：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">首先，严格按照指定的名称去查找</span><br><span class="line">其次，尝试加载后缀名是 .js 的文件</span><br><span class="line">如果没有.js的文件，则尝试加载 .json 结尾的文件</span><br><span class="line">如果没有 .json 的文件，则尝试加载 .node 结尾的文件</span><br><span class="line">查找规则：index  -&gt;  index.js   -&gt;   index.json   -&gt;  index.node</span><br></pre></td></tr></table></figure>
-</li>
+<pre><code>首先，严格按照指定的名称去查找
+其次，尝试加载后缀名是 .js 的文件
+如果没有.js的文件，则尝试加载 .json 结尾的文件
+如果没有 .json 的文件，则尝试加载 .node 结尾的文件
+查找规则：index  -&gt;  index.js   -&gt;   index.json   -&gt;  index.node
+</code></pre></li>
 </ul>
 <h3 id="第三方模块的加载机制【了解】"><a href="#第三方模块的加载机制【了解】" class="headerlink" title="第三方模块的加载机制【了解】"></a>第三方模块的加载机制【了解】</h3><ol>
 <li>先在项目根目录中查找<code>node_modules</code>文件夹</li>
@@ -662,9 +681,9 @@
           
             <a href="/tags/node-js/" rel="tag"># node.js</a>
           
-            <a href="/tags/express/" rel="tag"># express</a>
-          
             <a href="/tags/npm/" rel="tag"># npm</a>
+          
+            <a href="/tags/express/" rel="tag"># express</a>
           
         </div>
       
@@ -764,7 +783,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -787,7 +806,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">5</span>
+                      
+                    
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -826,7 +847,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                      
+                    
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

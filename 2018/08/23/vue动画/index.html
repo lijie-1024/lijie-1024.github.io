@@ -494,8 +494,17 @@
 <li>把需要添加动画的元素，使用Vue提供的元素 <code>&lt;transition&gt;&lt;/transition&gt;</code> 包裹起来</li>
 <li>添加两组类：</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.v-enter,</span><br><span class="line">.v-leave-to&#123;</span><br><span class="line">  opacity: 0;</span><br><span class="line">  transform: translateX(100px);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.v-enter-active,</span><br><span class="line">.v-leave-active&#123;</span><br><span class="line">  transition: all 0.5s ease;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="使用第三方-CSS-动画库"><a href="#使用第三方-CSS-动画库" class="headerlink" title="使用第三方 CSS 动画库"></a><a href="https://cn.vuejs.org/v2/guide/transitions.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E8%BF%87%E6%B8%A1%E7%9A%84%E7%B1%BB%E5%90%8D" target="_blank" rel="noopener">使用第三方 CSS 动画库</a></h3><ol>
+<pre><code>.v-enter,
+.v-leave-to{
+  opacity: 0;
+  transform: translateX(100px);
+}
+
+.v-enter-active,
+.v-leave-active{
+  transition: all 0.5s ease;
+}
+</code></pre><h3 id="使用第三方-CSS-动画库"><a href="#使用第三方-CSS-动画库" class="headerlink" title="使用第三方 CSS 动画库"></a><a href="https://cn.vuejs.org/v2/guide/transitions.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E8%BF%87%E6%B8%A1%E7%9A%84%E7%B1%BB%E5%90%8D" target="_blank" rel="noopener">使用第三方 CSS 动画库</a></h3><ol>
 <li>把需要添加动画的元素，使用v-if或v-show进行控制</li>
 <li>把需要添加动画的元素，使用Vue提供的元素 <code>&lt;transition&gt;&lt;/transition&gt;</code> 包裹起来</li>
 <li>为  <code>&lt;transition&gt;&lt;/transition&gt;</code>  添加两个属性类<code>enter-active-class</code>, <code>leave-active-class</code></li>
@@ -509,8 +518,14 @@
 <ul>
 <li><code>v-move</code> 和 <code>v-leave-active</code> 结合使用，能够让列表的过渡更加平缓柔和：</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.v-move&#123;</span><br><span class="line">  transition: all 0.8s ease;</span><br><span class="line">&#125;</span><br><span class="line">/*控制要被删除的元素，脱离标准流*/</span><br><span class="line">.v-leave-active&#123;</span><br><span class="line">  position: absolute;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+<pre><code>.v-move{
+  transition: all 0.8s ease;
+}
+/*控制要被删除的元素，脱离标准流*/
+.v-leave-active{
+  position: absolute;
+}
+</code></pre>
       
     </div>
 
@@ -679,7 +694,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -702,7 +717,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">5</span>
+                      
+                    
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -741,7 +758,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">13</span>
+                      
+                    
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
