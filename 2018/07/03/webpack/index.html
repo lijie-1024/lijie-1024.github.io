@@ -124,7 +124,7 @@
 <meta property="og:site_name" content="小黑&#39;s Blog">
 <meta property="og:description" content="webpack1. 在网页中会引用哪些常见的静态资源？ 样式表 .css/.less/.scss   JS文件 .js/.ts   图片 .jpg/.jpeg/.png/.gif/.bmp/.svg/.webp   字体文件 .eot/.ttf/.woff/.woff2/.svg   模板文件 .vue/.jsx    2. 网页中引入的静态资源多了以后有什么问题？？？ 对网页性能不友好：要发起很">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-10-24T08:33:12.394Z">
+<meta property="og:updated_time" content="2018-10-26T03:12:42.308Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="webpack">
 <meta name="twitter:description" content="webpack1. 在网页中会引用哪些常见的静态资源？ 样式表 .css/.less/.scss   JS文件 .js/.ts   图片 .jpg/.jpeg/.png/.gif/.bmp/.svg/.webp   字体文件 .eot/.ttf/.woff/.woff2/.svg   模板文件 .vue/.jsx    2. 网页中引入的静态资源多了以后有什么问题？？？ 对网页性能不友好：要发起很">
@@ -403,7 +403,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-10-24 16:33:12" itemprop="dateModified" datetime="2018-10-24T16:33:12+08:00">2018-10-24</time>
+                <time title="修改时间：2018-10-26 11:12:42" itemprop="dateModified" datetime="2018-10-26T11:12:42+08:00">2018-10-26</time>
               
             
           </span>
@@ -588,7 +588,106 @@ module<span class="token punctuation">.</span>exports <span class="token operato
 <li><code>--port</code> 配置 端口号</li>
 <li><code>--hot</code> 热更新；最新的代码，以打补丁的形式，替换到页面上，加快编译的速度；</li>
 </ul>
-<h2 id="10-打包处理非js文件"><a href="#10-打包处理非js文件" class="headerlink" title="10. 打包处理非js文件"></a>10. 打包处理非<code>js</code>文件</h2><h3 id="10-1-使用webpack打包css文件"><a href="#10-1-使用webpack打包css文件" class="headerlink" title="10.1 使用webpack打包css文件"></a>10.1 使用webpack打包css文件</h3><h3 id="10-2-使用webpack打包less文件"><a href="#10-2-使用webpack打包less文件" class="headerlink" title="10.2 使用webpack打包less文件"></a>10.2 使用webpack打包less文件</h3><h3 id="10-3-使用webpack打包sass文件"><a href="#10-3-使用webpack打包sass文件" class="headerlink" title="10.3 使用webpack打包sass文件"></a>10.3 使用webpack打包sass文件</h3><h3 id="10-4-使用webpack处理css中的路径"><a href="#10-4-使用webpack处理css中的路径" class="headerlink" title="10.4 使用webpack处理css中的路径"></a>10.4 使用webpack处理css中的路径</h3><h3 id="10-5-使用babel处理高级JS语法"><a href="#10-5-使用babel处理高级JS语法" class="headerlink" title="10.5 使用babel处理高级JS语法"></a>10.5 使用babel处理高级JS语法</h3><h2 id="相关文章"><a href="#相关文章" class="headerlink" title="相关文章"></a>相关文章</h2><p><a href="https://segmentfault.com/p/1210000008466178" target="_blank" rel="noopener">babel-preset-env：你需要的唯一Babel插件</a><br><a href="https://segmentfault.com/a/1190000009065987" target="_blank" rel="noopener">Runtime transform 运行时编译es6</a></p>
+<h2 id="10-打包处理非js文件"><a href="#10-打包处理非js文件" class="headerlink" title="10. 打包处理非js文件"></a>10. 打包处理非<code>js</code>文件</h2><ul>
+<li><p>使用 ES6 模块化规范，导入 样式表</p>
+</li>
+<li><p>默认，webpack 只能帮我们打包处理js类型的文件，非JS后缀名的文件，webpack默认处理不了。如果webpack 发现有处理不了的文件类型，则 尝试去查找，是否安装了对应的loader，来处理这种文件类型；</p>
+</li>
+<li><p>如果有，则调用 对应的loader加载器， 帮webpack处理这种文件类型； 当第三方 loader 处理完以后，会把 处理的结果，返回给 webpack 进行 打包合并；</p>
+</li>
+<li><p>如果没有合适的第三方loader则报错；</p>
+<h3 id="10-1-使用webpack打包css文件"><a href="#10-1-使用webpack打包css文件" class="headerlink" title="10.1 使用webpack打包css文件"></a>10.1 使用webpack打包css文件</h3><ol>
+<li><p>运行 <code>cnpm i style-loader css-loader -D</code></p>
+</li>
+<li><p>在<code>webpack.config.js</code>配置文件的导出对象上，新增一个<code>module</code>对象节点，在 对象中，新增一个 <code>rules</code>数组，格式如下：</p>
+<pre class="line-numbers language-js"><code class="language-js">module<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 所有非JS结尾的文件类型模块，都在这里进行配置</span>
+    rules<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token comment" spellcheck="true">// 文件处理规则</span>
+      <span class="token punctuation">{</span> test<span class="token punctuation">:</span> <span class="token regex">/\.css$/</span><span class="token punctuation">,</span> use<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'style-loader'</span><span class="token punctuation">,</span> <span class="token string">'css-loader'</span><span class="token punctuation">]</span> <span class="token punctuation">}</span> <span class="token comment" spellcheck="true">// 配置 所有 CSS 文件的 处理 loader</span>
+    <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+<h3 id="10-2-使用webpack打包less文件"><a href="#10-2-使用webpack打包less文件" class="headerlink" title="10.2 使用webpack打包less文件"></a>10.2 使用webpack打包less文件</h3><ol>
+<li><p>运行 <code>cnpm i less-loader less -D</code> </p>
+</li>
+<li><p>在<code>rules</code>中新增一个规则：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token punctuation">{</span> test<span class="token punctuation">:</span> <span class="token regex">/\.less$/</span><span class="token punctuation">,</span> use<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'style-loader'</span><span class="token punctuation">,</span> <span class="token string">'css-loader'</span><span class="token punctuation">,</span> <span class="token string">'less-loader'</span><span class="token punctuation">]</span> <span class="token punctuation">}</span> <span class="token comment" spellcheck="true">// 处理 less 文件的 loader</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+</ol>
+<h3 id="10-3-使用webpack打包scss文件"><a href="#10-3-使用webpack打包scss文件" class="headerlink" title="10.3 使用webpack打包scss文件"></a>10.3 使用webpack打包scss文件</h3><ol>
+<li><p>运行 <code>cnpm i sass-loader node-sass -D</code></p>
+</li>
+<li><p>在 <code>rules</code>中新增一个规则：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token punctuation">{</span> test<span class="token punctuation">:</span> <span class="token regex">/\.scss$/</span><span class="token punctuation">,</span> use<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'style-loader'</span><span class="token punctuation">,</span> <span class="token string">'css-loader'</span><span class="token punctuation">,</span> <span class="token string">'sass-loader'</span><span class="token punctuation">]</span> <span class="token punctuation">}</span> <span class="token comment" spellcheck="true">// 处理 scss 文件的loader</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+</ol>
+<h3 id="10-4-使用webpack处理css中的路径"><a href="#10-4-使用webpack处理css中的路径" class="headerlink" title="10.4 使用webpack处理css中的路径"></a>10.4 使用webpack处理css中的路径</h3><ol>
+<li><p>运行 <code>cnpm i url-loader -D</code></p>
+</li>
+<li><p>在 <code>rules</code>中新增一个规则：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token punctuation">{</span> test<span class="token punctuation">:</span> <span class="token regex">/\.jpg|jpeg|png|gif|svg$/</span><span class="token punctuation">,</span> use<span class="token punctuation">:</span> <span class="token string">'url-loader'</span> <span class="token punctuation">}</span> <span class="token comment" spellcheck="true">// 处理 样式表中 图片路径的loader</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+</ol>
+<h3 id="10-5-使用babel处理高级JS语法"><a href="#10-5-使用babel处理高级JS语法" class="headerlink" title="10.5 使用babel处理高级JS语法"></a>10.5 使用babel处理高级JS语法</h3><ol>
+<li><p>运行命令安装两套包：</p>
+<ul>
+<li><p>第一个套命令：</p>
+<pre class="line-numbers language-npm"><code class="language-npm">cnpm i babel-core babel-loader babel-plugin-transform-runtime -D
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>第二套命令：</p>
+<pre><code>cnpm i babel-preset-env babel-preset-stage-0 -D
+</code></pre></li>
+</ul>
+</li>
+<li><p>添加 <code>rules</code>规则：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token punctuation">{</span> test<span class="token punctuation">:</span> <span class="token regex">/\.js$/</span><span class="token punctuation">,</span> use<span class="token punctuation">:</span> <span class="token string">'babel-loader'</span><span class="token punctuation">,</span> exclude<span class="token punctuation">:</span> <span class="token regex">/node_modules/</span> <span class="token punctuation">}</span> <span class="token comment" spellcheck="true">// 处理JS高级语法的loader ; 注意： 一定要添加 exclude 排除项，把 node_modules 目录排除</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><p>在项目根目录中，添加一个 <code>.babelrc</code> 配置文件：</p>
+<pre class="line-numbers language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"presets"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"env"</span><span class="token punctuation">,</span> <span class="token string">"stage-0"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">"plugins"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"transform-runtime"</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+<h3 id="10-6-处理-字体文件路径问题"><a href="#10-6-处理-字体文件路径问题" class="headerlink" title="10.6 处理 字体文件路径问题"></a>10.6 处理 字体文件路径问题</h3><ol>
+<li><p>还是使用 <code>url-loader</code> 进行处理</p>
+</li>
+<li><p>添加 <code>rules</code>规则：</p>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token punctuation">{</span> test<span class="token punctuation">:</span> <span class="token regex">/\.ttf|woff|woff2|eot|svg$/</span><span class="token punctuation">,</span> use<span class="token punctuation">:</span> <span class="token string">'url-loader'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 处理 字体 文件的 loader</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+</ol>
+<h2 id="11-ES6-中模块化规范"><a href="#11-ES6-中模块化规范" class="headerlink" title="11. ES6 中模块化规范"></a>11. ES6 中模块化规范</h2><ol>
+<li>暴露成员方式1： <code>export default { }</code><ol>
+<li>每个模块中，只能使用1次</li>
+<li>这种方式暴露的成员，在接收的时候，可以使用任意名称来接收；</li>
+</ol>
+</li>
+<li>暴露成员方式2：<code>export var a = 10</code><ol>
+<li>每个模块中可以多次使用 <code>export</code> 暴露成员给外界；</li>
+<li>暴露的成员，必须使用 <code>import {} from &#39;模块&#39;</code>来接收</li>
+<li>暴露的成员，在接收的时候，必须使用指定的名称来接收；但是，接收完以后；可以使用 <code>as</code> 关键字改名</li>
+</ol>
+</li>
+<li>导入成员的三种方式：<ol>
+<li><code>import obj from &#39;模块&#39;</code></li>
+<li><code>import &#39;模块&#39;</code></li>
+<li><code>import { 需要按需接收的成员 } from &#39;模块&#39;</code>   或 `import obj, { 按需导入的成员 } from ‘模块’</li>
+</ol>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="相关文章"><a href="#相关文章" class="headerlink" title="相关文章"></a>相关文章</h2><p><a href="https://segmentfault.com/p/1210000008466178" target="_blank" rel="noopener">babel-preset-env：你需要的唯一Babel插件</a><br><a href="https://segmentfault.com/a/1190000009065987" target="_blank" rel="noopener">Runtime transform 运行时编译es6</a></p>
 
       
     </div>
@@ -897,7 +996,7 @@ module<span class="token punctuation">.</span>exports <span class="token operato
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#webpack"><span class="nav-number">1.</span> <span class="nav-text">webpack</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-在网页中会引用哪些常见的静态资源？"><span class="nav-number">2.</span> <span class="nav-text">1. 在网页中会引用哪些常见的静态资源？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-网页中引入的静态资源多了以后有什么问题？？？"><span class="nav-number">3.</span> <span class="nav-text">2. 网页中引入的静态资源多了以后有什么问题？？？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-如何解决上述两个问题"><span class="nav-number">4.</span> <span class="nav-text">3. 如何解决上述两个问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-什么是webpack"><span class="nav-number">5.</span> <span class="nav-text">4. 什么是webpack?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-在项目中安装和配置webpack"><span class="nav-number">6.</span> <span class="nav-text">5. 在项目中安装和配置webpack</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-初步使用webpack构建项目"><span class="nav-number">7.</span> <span class="nav-text">6. 初步使用webpack构建项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-实现webpack的实时打包构建"><span class="nav-number">8.</span> <span class="nav-text">7. 实现webpack的实时打包构建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-使用html-webpack-plugin插件配置启动页面"><span class="nav-number">9.</span> <span class="nav-text">8. 使用html-webpack-plugin插件配置启动页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-实现自动打开浏览器、热更新和配置浏览器的默认端口号"><span class="nav-number">10.</span> <span class="nav-text">9. 实现自动打开浏览器、热更新和配置浏览器的默认端口号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-打包处理非js文件"><span class="nav-number">11.</span> <span class="nav-text">10. 打包处理非js文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#10-1-使用webpack打包css文件"><span class="nav-number">11.1.</span> <span class="nav-text">10.1 使用webpack打包css文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-2-使用webpack打包less文件"><span class="nav-number">11.2.</span> <span class="nav-text">10.2 使用webpack打包less文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-3-使用webpack打包sass文件"><span class="nav-number">11.3.</span> <span class="nav-text">10.3 使用webpack打包sass文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-4-使用webpack处理css中的路径"><span class="nav-number">11.4.</span> <span class="nav-text">10.4 使用webpack处理css中的路径</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-5-使用babel处理高级JS语法"><span class="nav-number">11.5.</span> <span class="nav-text">10.5 使用babel处理高级JS语法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相关文章"><span class="nav-number">12.</span> <span class="nav-text">相关文章</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#webpack"><span class="nav-number">1.</span> <span class="nav-text">webpack</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-在网页中会引用哪些常见的静态资源？"><span class="nav-number">2.</span> <span class="nav-text">1. 在网页中会引用哪些常见的静态资源？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-网页中引入的静态资源多了以后有什么问题？？？"><span class="nav-number">3.</span> <span class="nav-text">2. 网页中引入的静态资源多了以后有什么问题？？？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-如何解决上述两个问题"><span class="nav-number">4.</span> <span class="nav-text">3. 如何解决上述两个问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-什么是webpack"><span class="nav-number">5.</span> <span class="nav-text">4. 什么是webpack?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-在项目中安装和配置webpack"><span class="nav-number">6.</span> <span class="nav-text">5. 在项目中安装和配置webpack</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-初步使用webpack构建项目"><span class="nav-number">7.</span> <span class="nav-text">6. 初步使用webpack构建项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-实现webpack的实时打包构建"><span class="nav-number">8.</span> <span class="nav-text">7. 实现webpack的实时打包构建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-使用html-webpack-plugin插件配置启动页面"><span class="nav-number">9.</span> <span class="nav-text">8. 使用html-webpack-plugin插件配置启动页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-实现自动打开浏览器、热更新和配置浏览器的默认端口号"><span class="nav-number">10.</span> <span class="nav-text">9. 实现自动打开浏览器、热更新和配置浏览器的默认端口号</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-打包处理非js文件"><span class="nav-number">11.</span> <span class="nav-text">10. 打包处理非js文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#10-1-使用webpack打包css文件"><span class="nav-number">11.1.</span> <span class="nav-text">10.1 使用webpack打包css文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-2-使用webpack打包less文件"><span class="nav-number">11.2.</span> <span class="nav-text">10.2 使用webpack打包less文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-3-使用webpack打包scss文件"><span class="nav-number">11.3.</span> <span class="nav-text">10.3 使用webpack打包scss文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-4-使用webpack处理css中的路径"><span class="nav-number">11.4.</span> <span class="nav-text">10.4 使用webpack处理css中的路径</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-5-使用babel处理高级JS语法"><span class="nav-number">11.5.</span> <span class="nav-text">10.5 使用babel处理高级JS语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-6-处理-字体文件路径问题"><span class="nav-number">11.6.</span> <span class="nav-text">10.6 处理 字体文件路径问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-ES6-中模块化规范"><span class="nav-number">12.</span> <span class="nav-text">11. ES6 中模块化规范</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#相关文章"><span class="nav-number">13.</span> <span class="nav-text">相关文章</span></a></li></ol></div>
             
 
           </div>
